@@ -22,7 +22,7 @@
         </div>
 
         <div class="scroll-down" style="width: 100%;">
-            <a class="btn btn-brand bounce-3"  href="#main">Press to scroll down</a>
+            <a class="btn btn-brand bounce-3" href="#main" onclick="showFooter()">Press to scroll down</a>
         </div>
     </section>
 
@@ -31,27 +31,27 @@
             <div class="menu">
                 <div class="menu-box">
                     <div class="menu-btn" style="width: 100%;">
-                        <a class="btn btn-brand"  href="#">Start</a>
+                        <a class="btn btn-brand" href="#">Start</a>
                     </div>
                     <div class="menu-btn" onclick="openAutosurf()" style="width: 100%;">
                         <a class="btn btn-brand">Contact</a>
                     </div>
-                    <div class="menu-btn" style="width: 100%;">
-                        <a class="btn btn-brand" href="#" onclick="openSurfHeaven()">SurfHeaven</a>
+                    <div class="menu-btn" onclick="openSurfHeaven()" style="width: 100%;">
+                        <a class="btn btn-brand">SurfHeaven</a>
                     </div>
-                    <div class="menu-btn"style="width: 100%;">
-                        <a class="btn btn-brand"  onclick="openAbout()">About Me</a>
+                    <div class="menu-btn" style="width: 100%;">
+                        <a class="btn btn-brand" onclick="openAbout()">About Me</a>
                     </div>
 
                     <div class="authors" style="width: 100%;">
                         <a class="btn btn-brand" target="_blank" href="https://steamcommunity.com/id/q1y">qoney</a>
                         <a class="btn btn-brand" href="https://steamcommunity.com/id/ruiqen">voun</a>
-                    </div>                        
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div id="autosurf" class="">
+        <div id="autosurf" class="" style="display: none;">
             <div class="menu">
                 <div class="autosurf-box">
                     <header class="hed">
@@ -66,24 +66,15 @@
             </div>
         </div>
 
-        <div id="surfheaven" style="display: none;">
+        <div id="surfheaven" class="" style="display: none;">
             <div class="menu">
                 <div class="autosurf-box">
                     <header class="hed">
                         <h5>SurfHeaven Profile</h5>
                         <p>Check out my profiles on different platforms!</p>
-                        <p>
-                            <i class="fab fa-steam"></i>
-                            <a href="https://steamcommunity.com/groups/YOURGROUP" target="_blank">Steam Group</a>
-                        </p>
-                        <p>
-                            <i class="fab fa-faceit"></i>
-                            <a href="https://www.faceit.com/en/players/YOURFACEIT" target="_blank">Faceit Profile</a>
-                        </p>
-                        <p>
-                            <i class="fas fa-globe"></i>
-                            <a href="https://surfheaven.eu/player/5167198" target="_blank">SurfHeaven Profile</a>
-                        </p>
+                        <p><i class="lab la-steam"></i> <a href="https://steamcommunity.com/groups/YOURGROUP" target="_blank">Steam Group</a></p>
+                        <p><i class="lab la-faceit"></i> <a href="https://www.faceit.com/en/players/YOURFACEIT" target="_blank">Faceit Profile</a></p>
+                        <p><i class="lab la-globe"></i> <a href="https://surfheaven.eu/player/5167198" target="_blank">SurfHeaven Profile</a></p>
                     </header>
                     <div class="menu-btn back">
                         <a class="btn btn-brand" onclick="closeSurfHeaven()">Back</a>
@@ -92,7 +83,7 @@
             </div>
         </div>
 
-        <div id="about">
+        <div id="about" style="display: none;">
             <div class="menu">
                 <div class="autosurf-box">
                     <header class="hed">
@@ -106,10 +97,9 @@
             </div>
         </div>
 
-        <footer style="width: 100%;">
-            <p class="mb-0">&copy; Copyright 2022,<a href="" class="fw-bold"> voun</a></p>
+        <footer id="footer" style="width: 100%; display: none;">
+            <p class="mb-0">&copy; Copyright 2022, <a href="" class="fw-bold"> voun</a></p>
         </footer>
-
     </section>
 
     <script>
@@ -123,12 +113,12 @@
             document.getElementById("menu").style.display = "block";
         }
 
-        function openSurfHeaven() {
+        function openSurfHeaven(){
             document.getElementById("surfheaven").style.display = "block";
             document.getElementById("menu").style.display = "none";
         }
 
-        function closeSurfHeaven() {
+        function closeSurfHeaven(){
             document.getElementById("surfheaven").style.display = "none";
             document.getElementById("menu").style.display = "block";
         }
@@ -141,6 +131,11 @@
         function closeAbout(){
             document.getElementById("about").style.display = "none";
             document.getElementById("menu").style.display = "block";
+        }
+
+        // Function to show the footer when scrolling down or clicking "Press to scroll down"
+        function showFooter() {
+            document.getElementById("footer").style.display = "block";
         }
     </script>
 </body>
