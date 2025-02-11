@@ -71,6 +71,76 @@
                 <div class="autosurf-box">
                     <header class="hed">
                         <h5>SurfHeaven Profile</h5>
+                        <p>Check out my profiles on different platforms!</p>
+                        <p><i class="lab la-steam"></i> <a href="https://steamcommunity.com/groups/YOURGROUP" target="_blank">Steam Group</a></p>
+                        <p><i class="lab la-faceit"></i> <a href="https://www.faceit.com/en/players/YOURFACEIT" target="_blank">Faceit Profile</a></p>
+                        <p><i class="lab la-globe"></i> <a href="https://surfheaven.eu/player/5167198" target="_blank">SurfHeaven Profile</a></p>
+                    </header>
+                    <div class="menu-btn back">
+                        <a class="btn btn-brand" onclick="closeSurfHeaven()">Back</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="about" style="display: none;">
+            <div class="menu">
+                <div class="autosurf-box">
+                    <header class="hed">
+                        <h5>About us</h5>
+                        <p>test</p>
+                    </header>
+                    <div class="menu-btn back">
+                        <a class="btn btn-brand" onclick="closeAbout()">Back</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer style="width: 100%;">
+            <p class="mb-0">&copy; Copyright 2022, <a href="" class="fw-bold"> voun</a></p>
+        </footer>
+    </section>
+
+    <script>
+        function openAutosurf(){
+            document.getElementById("autosurf").style.display = "block";
+            document.getElementById("menu").style.display = "none";
+        }
+
+        function closeAutosurf(){
+            document.getElementById("autosurf").style.display = "none";
+            document.getElementById("menu").style.display = "block";
+        }
+
+        function openSurfHeaven(){
+            document.getElementById("surfheaven").style.display = "block";
+            document.getElementById("menu").style.display = "none";
+        }
+
+        function closeSurfHeaven(){
+            document.getElementById("surfheaven").style.display = "none";
+            document.getElementById("menu").style.display = "block";
+        }
+
+        function openAbout(){
+            document.getElementById("about").style.display = "block";
+            document.getElementById("menu").style.display = "none";
+        }
+
+        function closeAbout(){
+            document.getElementById("about").style.display = "none";
+            document.getElementById("menu").style.display = "block";
+        }
+    </script>
+</body>
+</html>
+
+        <div id="surfheaven" class="" style="display: none;">
+            <div class="menu">
+                <div class="autosurf-box">
+                    <header class="hed">
+                        <h5>SurfHeaven Profile</h5>
                         <p>Check out my SurfHeaven stats and achievements!</p>
                         <p><a href="https://surfheaven.eu/player/5167198" target="_blank">Go to my profile</a></p>
                     </header>
