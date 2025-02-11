@@ -13,41 +13,52 @@
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/aos.js"></script>
     <script src="./assets/js/main.js"></script>
-    <script> $(function() { AOS.init(); }); </script>  
+    <script> 
+        $(function() { 
+            AOS.init(); 
+        }); 
+    </script>
+    <style>
+        /* Styl CSS do ustawienia białych ikon */
+        .white-icon {
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <section id="start" class="start" style="min-height: 950px;">
+
         <div class="middle-img" style="width: 100%;">
             <img src="assets/images/d15a4207-a6e3-4e60-9e9d-5f3a0adba878.gif" alt="">
         </div>
 
         <div class="scroll-down" style="width: 100%;">
-            <a class="btn btn-brand bounce-3"  href="#main">Press to scroll down</a>
+            <a class="btn btn-brand bounce-3" href="#main">Press to scroll down</a>
         </div>
     </section>
 
     <section id="main" class="main" style="min-height: 950px;">
+        
         <div id="menu">
             <div class="menu">
                 <div class="menu-box">
                     <div class="menu-btn" style="width: 100%;">
-                        <a class="btn btn-brand"  href="#">Start</a>
+                        <a class="btn btn-brand" href="#">Start</a>
                     </div>
                     <div class="menu-btn" onclick="openAutosurf()" style="width: 100%;">
                         <a class="btn btn-brand">Contact</a>
                     </div>
                     <div class="menu-btn" style="width: 100%;">
-                        <!-- Zmieniony href, aby nie powodował przewijania strony -->
-                        <a class="btn btn-brand" href="javascript:void(0)" onclick="openSurfHeaven()">SurfHeaven</a>
+                        <a class="btn btn-brand" href="https://surfheaven.eu/player/5167198" target="_blank">SurfHeaven</a>
                     </div>
-                    <div class="menu-btn"style="width: 100%;">
-                        <a class="btn btn-brand"  onclick="openAbout()">About Me</a>
+                    <div class="menu-btn" style="width: 100%;">
+                        <a class="btn btn-brand" onclick="openAbout()">About Me</a>
                     </div>
 
                     <div class="authors" style="width: 100%;">
-                        <a class="btn btn-brand" target="_blank" href="https://steamcommunity.com/id/q1y">qoney</a>
-                        <a class="btn btn-brand" href="https://steamcommunity.com/id/ruiqen">voun</a>
-                    </div>                        
+                        <a class="btn btn-brand" target="_blank" href="https://steamcommunity.com/id/q1y"><i class="fab fa-steam white-icon"></i> qoney</a>
+                        <a class="btn btn-brand" href="https://steamcommunity.com/id/ruiqen"><i class="fab fa-steam white-icon"></i> voun</a>
+                    </div>   
                 </div>
             </div>
         </div>
@@ -57,37 +68,11 @@
                 <div class="autosurf-box">
                     <header class="hed">
                         <h5>For more information, please contact me at</h5>
-                        <p><i class="lab la-discord"></i>vounik</p>
+                        <p><i class="lab la-discord"></i> vounik</p>
                         <p><i class="lab la-instagram"></i><a href="https://instagram.com/hyazeh" target="_blank">Instagram</a></p>
                     </header>
                     <div class="menu-btn back">
                         <a class="btn btn-brand" onclick="closeAutosurf()">Back</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="surfheaven" style="display: none;">
-            <div class="menu">
-                <div class="autosurf-box">
-                    <header class="hed">
-                        <h5>SurfHeaven Profile</h5>
-                        <p>Check out my profiles on different platforms!</p>
-                        <p>
-                            <i class="fab fa-steam"></i>
-                            <a href="https://steamcommunity.com/groups/YOURGROUP" target="_blank">Steam Group</a>
-                        </p>
-                        <p>
-                            <i class="fab fa-faceit"></i>
-                            <a href="https://www.faceit.com/en/players/YOURFACEIT" target="_blank">Faceit Profile</a>
-                        </p>
-                        <p>
-                            <i class="fas fa-globe"></i>
-                            <a href="https://surfheaven.eu/player/5167198" target="_blank">SurfHeaven Profile</a>
-                        </p>
-                    </header>
-                    <div class="menu-btn back">
-                        <a class="btn btn-brand" onclick="closeSurfHeaven()">Back</a>
                     </div>
                 </div>
             </div>
@@ -98,7 +83,7 @@
                 <div class="autosurf-box">
                     <header class="hed">
                         <h5>About us</h5>
-                        <p>test</p>
+                        <p>test </p>
                     </header>
                     <div class="menu-btn back">
                         <a class="btn btn-brand" onclick="closeAbout()">Back</a>
@@ -108,9 +93,8 @@
         </div>
 
         <footer style="width: 100%;">
-            <p class="mb-0">&copy; Copyright 2022,<a href="" class="fw-bold"> voun</a></p>
+            <p class="mb-0">&copy; Copyright 2022, <a href="" class="fw-bold"> voun</a></p>
         </footer>
-
     </section>
 
     <script>
@@ -121,16 +105,6 @@
 
         function closeAutosurf(){
             document.getElementById("autosurf").style.display = "none";
-            document.getElementById("menu").style.display = "block";
-        }
-
-        function openSurfHeaven() {
-            document.getElementById("surfheaven").style.display = "block";
-            document.getElementById("menu").style.display = "none";
-        }
-
-        function closeSurfHeaven() {
-            document.getElementById("surfheaven").style.display = "none";
             document.getElementById("menu").style.display = "block";
         }
 
