@@ -22,7 +22,7 @@
         </div>
 
         <div class="scroll-down" style="width: 100%;">
-            <a class="btn btn-brand bounce-3" href="#main">Press to scroll down</a>
+            <a class="btn btn-brand bounce-3" href="#main" onclick="showFooter()">Press to scroll down</a>
         </div>
     </section>
 
@@ -97,7 +97,7 @@
             </div>
         </div>
 
-        <footer style="width: 100%;">
+        <footer id="footer" style="width: 100%; display: none;">
             <p class="mb-0">&copy; Copyright 2022, <a href="" class="fw-bold"> voun</a></p>
         </footer>
     </section>
@@ -132,73 +132,10 @@
             document.getElementById("about").style.display = "none";
             document.getElementById("menu").style.display = "block";
         }
-    </script>
-</body>
-</html>
 
-        <div id="surfheaven" class="" style="display: none;">
-            <div class="menu">
-                <div class="autosurf-box">
-                    <header class="hed">
-                        <h5>SurfHeaven Profile</h5>
-                        <p>Check out my SurfHeaven stats and achievements!</p>
-                        <p><a href="https://surfheaven.eu/player/5167198" target="_blank">Go to my profile</a></p>
-                    </header>
-                    <div class="menu-btn back">
-                        <a class="btn btn-brand" onclick="closeSurfHeaven()">Back</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="about" style="display: none;">
-            <div class="menu">
-                <div class="autosurf-box">
-                    <header class="hed">
-                        <h5>About us</h5>
-                        <p>test</p>
-                    </header>
-                    <div class="menu-btn back">
-                        <a class="btn btn-brand" onclick="closeAbout()">Back</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <footer style="width: 100%;">
-            <p class="mb-0">&copy; Copyright 2022, <a href="" class="fw-bold"> voun</a></p>
-        </footer>
-    </section>
-
-    <script>
-        function openAutosurf(){
-            document.getElementById("autosurf").style.display = "block";
-            document.getElementById("menu").style.display = "none";
-        }
-
-        function closeAutosurf(){
-            document.getElementById("autosurf").style.display = "none";
-            document.getElementById("menu").style.display = "block";
-        }
-
-        function openSurfHeaven(){
-            document.getElementById("surfheaven").style.display = "block";
-            document.getElementById("menu").style.display = "none";
-        }
-
-        function closeSurfHeaven(){
-            document.getElementById("surfheaven").style.display = "none";
-            document.getElementById("menu").style.display = "block";
-        }
-
-        function openAbout(){
-            document.getElementById("about").style.display = "block";
-            document.getElementById("menu").style.display = "none";
-        }
-
-        function closeAbout(){
-            document.getElementById("about").style.display = "none";
-            document.getElementById("menu").style.display = "block";
+        // Function to show the footer when scrolling down or clicking "Press to scroll down"
+        function showFooter() {
+            document.getElementById("footer").style.display = "block";
         }
     </script>
 </body>
