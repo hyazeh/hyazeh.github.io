@@ -17,95 +17,88 @@
 </head>
 <body>
     <section id="start" class="start" style="min-height: 950px;">
-
         <div class="middle-img" style="width: 100%;">
             <img src="assets/images/d15a4207-a6e3-4e60-9e9d-5f3a0adba878.gif" alt="">
         </div>
 
-        <div class=" scroll-down" style="width: 100%;">
-            <a class="btn btn-brand bounce-3"  href="#main"  >Press to scroll down</a>
-          </div>
+        <div class="scroll-down" style="width: 100%;">
+            <a class="btn btn-brand bounce-3" href="#main">Press to scroll down</a>
+        </div>
     </section>
 
     <section id="main" class="main" style="min-height: 950px;">
-        
-            <div id="menu">
-                <div class="menu">
-                    <div class="menu-box">
-                    
-                            <div class="menu-btn" style="width: 100%;">
-                                <a class="btn btn-brand"  href="#"  >Start</a>
-                            </div>
-                            <div class="menu-btn" onclick="openAutosurf()" style="width: 100%;">
-                                <a class="btn btn-brand" >Contact</a>
-                            </div>
-<div class="menu-btn" style="width: 100%;">
-    <a class="btn btn-brand" href="https://surfheaven.eu/player/5167198" target="_blank">SurfHeaven</a>
-</div>                   
-                            <div class="menu-btn"style="width: 100%;">
-                                <a class="btn btn-brand"  onclick="openAbout()">About Me</a>
-                            </div>
+        <div id="menu">
+            <div class="menu">
+                <div class="menu-box">
+                    <div class="menu-btn" style="width: 100%;">
+                        <a class="btn btn-brand" href="#">Start</a>
+                    </div>
+                    <div class="menu-btn" onclick="openAutosurf()" style="width: 100%;">
+                        <a class="btn btn-brand">Contact</a>
+                    </div>
+                    <div class="menu-btn" onclick="openSurfHeaven()" style="width: 100%;">
+                        <a class="btn btn-brand">SurfHeaven</a>
+                    </div>
+                    <div class="menu-btn" style="width: 100%;">
+                        <a class="btn btn-brand" onclick="openAbout()">About Me</a>
+                    </div>
 
-                            <div class="authors" style="width: 100%;">
-                                <a class="btn btn-brand" target="_blank"   href="https://steamcommunity.com/id/q1y"  >qoney</a>
-                                <a class="btn btn-brand"  href="https://steamcommunity.com/id/ruiqen"  >voun</a>
-                            </div>                        
-
+                    <div class="authors" style="width: 100%;">
+                        <a class="btn btn-brand" target="_blank" href="https://steamcommunity.com/id/q1y">qoney</a>
+                        <a class="btn btn-brand" href="https://steamcommunity.com/id/ruiqen">voun</a>
                     </div>
                 </div>
-
-            </div>
-
-
-<div id="autosurf" class="">
-    <div class="menu">
-        <div class="autosurf-box">
-            <header class="hed">
-                <h5>For more information, please contact me at</h5>
-                <p><i class="lab la-discord"></i>vounik</p>
-                <p><i class="lab la-instagram"></i><a href="https://instagram.com/hyazeh" target="_blank">Instagram</a></p>
-            </header>
-            <div class="menu-btn back">
-                <a class="btn btn-brand" onclick="closeAutosurf()">Back</a>
             </div>
         </div>
-    </div>
-</div>
 
-
-<div id="freehack">
-    <div class="bigklamoty">
-        <!-- Link, który przenosi na stronę, bez wyświetlania tekstu -->
-        <a href="https://surfheaven.eu/player/5167198" target="_blank"></a>
-    </div>
-</div>
-                
-            </div>
-
-            <div id="about">
-                <div class="menu">
-                    <div class="autosurf-box">
-                        <header class="hed">
-                            <h5>About us</h5>
-                            <p>test </p>
-                        </header>
-                        <div class="menu-btn back">
-                            <a class="btn btn-brand" onclick="closeAbout()">Back</a>
-                            
-                        </div>
+        <div id="autosurf" class="" style="display: none;">
+            <div class="menu">
+                <div class="autosurf-box">
+                    <header class="hed">
+                        <h5>For more information, please contact me at</h5>
+                        <p><i class="lab la-discord"></i>vounik</p>
+                        <p><i class="lab la-instagram"></i><a href="https://instagram.com/hyazeh" target="_blank">Instagram</a></p>
+                    </header>
+                    <div class="menu-btn back">
+                        <a class="btn btn-brand" onclick="closeAutosurf()">Back</a>
                     </div>
                 </div>
             </div>
-        
+        </div>
+
+        <div id="surfheaven" class="" style="display: none;">
+            <div class="menu">
+                <div class="autosurf-box">
+                    <header class="hed">
+                        <h5>SurfHeaven Profile</h5>
+                        <p>Check out my SurfHeaven stats and achievements!</p>
+                        <p><a href="https://surfheaven.eu/player/5167198" target="_blank">Go to my profile</a></p>
+                    </header>
+                    <div class="menu-btn back">
+                        <a class="btn btn-brand" onclick="closeSurfHeaven()">Back</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="about" style="display: none;">
+            <div class="menu">
+                <div class="autosurf-box">
+                    <header class="hed">
+                        <h5>About us</h5>
+                        <p>test</p>
+                    </header>
+                    <div class="menu-btn back">
+                        <a class="btn btn-brand" onclick="closeAbout()">Back</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <footer style="width: 100%;">
-            <p class="mb-0">&copy; Copyright 2022,<a href="" class="fw-bold"> voun</a></p>
+            <p class="mb-0">&copy; Copyright 2022, <a href="" class="fw-bold"> voun</a></p>
         </footer>
-
-
-
     </section>
-        
 
     <script>
         function openAutosurf(){
@@ -118,13 +111,13 @@
             document.getElementById("menu").style.display = "block";
         }
 
-        function openfreehack(){
-            document.getElementById("freehack").style.display = "block";
+        function openSurfHeaven(){
+            document.getElementById("surfheaven").style.display = "block";
             document.getElementById("menu").style.display = "none";
         }
 
-        function closefreehack(){
-            document.getElementById("freehack").style.display = "none";
+        function closeSurfHeaven(){
+            document.getElementById("surfheaven").style.display = "none";
             document.getElementById("menu").style.display = "block";
         }
 
@@ -137,7 +130,6 @@
             document.getElementById("about").style.display = "none";
             document.getElementById("menu").style.display = "block";
         }
-
     </script>
 </body>
 </html>
