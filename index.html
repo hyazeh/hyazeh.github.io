@@ -21,7 +21,6 @@
             align-items: center; /* Wyśrodkowanie logotypów w pionie */
             gap: 20px; /* Odstęp między logotypami */
             justify-content: flex-start; /* Ustawienie logotypów w jednej linii pionowej */
-            height: auto;
         }
 
         .logos-container p {
@@ -42,6 +41,18 @@
             justify-content: center;
             align-items: flex-start; /* Loga wyrównane do góry */
             flex-direction: column;
+        }
+
+        /* Ustawienie wszystkich logotypów w jednej linii prostej */
+        .logos-align {
+            display: flex;
+            align-items: baseline; /* Logotypy będą wyrównane w linii */
+            justify-content: center;
+        }
+
+        .logos-align img {
+            height: 30px; /* Ustawienie jednakowej wysokości logotypów */
+            width: 30px;
         }
     </style>
 </head>
@@ -106,7 +117,8 @@
 
                         <!-- Wrapper do loga -->
                         <div class="logos-wrapper">
-                            <div class="logos-container">
+                            <div class="logos-align">
+                                <!-- Logotypy w jednej linii pionowej -->
                                 <p>
                                     <img src="https://i.imgur.com/Tfie9U4.png" alt="Faceit Logo">
                                     <a href="https://www.faceit.com/en/players/YOURFACEIT" target="_blank">Faceit</a>
