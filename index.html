@@ -21,7 +21,8 @@
             flex-direction: column; /* Logotypy w jednej linii pionowej */
             align-items: center; /* Wyśrodkowanie logotypów */
             gap: 20px; /* Odstęp pomiędzy logotypami */
-            justify-content: center; /* Wyśrodkowanie */
+            justify-content: flex-start; /* Ustawienie logotypów od góry */
+            padding: 10px; /* Padding, żeby kontener nie dotykał brzegów */
         }
 
         /* Każdy paragraf z logo i tekstem */
@@ -38,25 +39,15 @@
             height: 30px;
         }
 
-        /* Ustawienie przycisku "Back" */
-        .menu-btn.back {
+        /* Przycisk 'Back' w sekcji SurfHeaven */
+        .back {
             display: flex;
-            justify-content: center;
+            justify-content: center; /* Wyśrodkowanie przycisku */
             margin-top: 20px;
         }
 
-        .menu-btn.back a {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            text-align: center;
-        }
-
-        .menu-btn.back a:hover {
-            background-color: #0056b3;
+        .back .btn {
+            margin: 0;
         }
     </style>
 </head>
