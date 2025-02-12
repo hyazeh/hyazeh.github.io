@@ -15,27 +15,33 @@
     <script src="./assets/js/main.js"></script>
     <script> $(function() { AOS.init(); }); </script>  
     <style>
-       
+        /* Kontener logotypów */
         .logos-container {
             display: flex;
-            flex-direction: column; 
-            align-items: center;
-            gap: 20px; 
-            justify-content: flex-start; 
+            flex-direction: column; /* Logotypy w jednej linii pionowej */
+            align-items: center; /* Wyśrodkowanie logotypów */
+            gap: 20px; /* Odstęp pomiędzy logotypami */
+            justify-content: flex-start; /* Ustawienie logotypów od góry */
         }
 
-        
+        /* Każdy paragraf z logo i tekstem */
         .logos-container p {
             display: flex;
-            align-items: center; 
-            gap: 20px; 
+            align-items: center; /* Wyrównanie logotypów i tekstów obok siebie */
+            gap: 20px; /* Odstęp między logiem a tekstem (dopasowane do Steam) */
             margin: 0;
         }
 
-        
+        /* Loga mają jednakową wysokość i szerokość */
         .logos-container img {
             width: 30px;
             height: 30px;
+        }
+
+        /* Przyciski */
+        .menu-btn.back {
+            margin-top: 20px;
+            text-align: center;
         }
     </style>
 </head>
@@ -83,7 +89,8 @@
                         <p><i class="lab la-discord"></i>vounik</p>
                         <p><i class="lab la-instagram"></i><a href="https://instagram.com/hyazeh" target="_blank">Instagram</a></p>
                     </header>
-                    <div class="menu-btn back">
+                    <!-- Przycisk Back w tym samym stylu, co inne przyciski -->
+                    <div class="menu-btn">
                         <a class="btn btn-brand" onclick="closeAutosurf()">Back</a>
                     </div>
                 </div>
@@ -98,7 +105,7 @@
                         <p>Check out my profiles on different platforms!</p>
                         <p><i class="lab la-steam"></i> <a href="https://steamcommunity.com/groups/YOURGROUP" target="_blank">Steam</a></p>
 
-                        
+                        <!-- Kontener logotypów i tekstów -->
                         <div class="logos-container">
                             <p>
                                 <img src="https://i.imgur.com/Tfie9U4.png" alt="Faceit Logo">
@@ -107,11 +114,12 @@
 
                             <p>
                                 <img src="https://i.imgur.com/Y0Cy20e.png" alt="SurfHeaven Logo">
-                                <a href="https://surfheaven.eu/player/5167198" target="_blank">SH</a>
+                                <a href="https://surfheaven.eu/player/5167198" target="_blank">SurfHeaven</a>
                             </p>
                         </div>
                     </header>
-                    <div class="menu-btn back">
+                    <!-- Przycisk Back w tym samym stylu, co inne przyciski -->
+                    <div class="menu-btn">
                         <a class="btn btn-brand" onclick="closeSurfHeaven()">Back</a>
                     </div>
                 </div>
@@ -125,7 +133,8 @@
                         <h5>About us</h5>
                         <p>test</p>
                     </header>
-                    <div class="menu-btn back">
+                    <!-- Przycisk Back w tym samym stylu, co inne przyciski -->
+                    <div class="menu-btn">
                         <a class="btn btn-brand" onclick="closeAbout()">Back</a>
                     </div>
                 </div>
