@@ -14,6 +14,13 @@
     <script src="./assets/js/aos.js"></script>
     <script src="./assets/js/main.js"></script>
     <script> $(function() { AOS.init(); }); </script>  
+    <style>
+        .logos-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    </style>
 </head>
 <body>
     <section id="start" class="start" style="min-height: 950px;">
@@ -74,11 +81,13 @@
                         <p>Check out my profiles on different platforms!</p>
                         <p><i class="lab la-steam"></i> <a href="https://steamcommunity.com/groups/YOURGROUP" target="_blank">Steam</a></p>
 
-                        <p><img src="https://i.imgur.com/Tfie9U4.png" alt="Faceit Logo" style="width: 25px; height: 25px; margin-right: 10px;">
-                        <a href="https://www.faceit.com/en/players/YOURFACEIT" target="_blank">Faceit</a></p>
+                        <div class="logos-container">
+                            <p><img src="https://i.imgur.com/Tfie9U4.png" alt="Faceit Logo" style="width: 30px; height: 30px; margin-right: 10px;">
+                            <a href="https://www.faceit.com/en/players/YOURFACEIT" target="_blank">Faceit</a></p>
 
-                        <p><img src="https://i.imgur.com/Y0Cy20e.png" alt="SurfHeaven Logo" style="width: 30px; height: 30px; margin-right: 10px;">
-                        <a href="https://surfheaven.eu/player/5167198" target="_blank">SurfHeaven</a></p>
+                            <p><img src="https://i.imgur.com/Y0Cy20e.png" alt="SurfHeaven Logo" style="width: 30px; height: 30px; margin-right: 10px;">
+                            <a href="https://surfheaven.eu/player/5167198" target="_blank">SurfHeaven</a></p>
+                        </div>
                     </header>
                     <div class="menu-btn back">
                         <a class="btn btn-brand" onclick="closeSurfHeaven()">Back</a>
@@ -136,7 +145,6 @@
             document.getElementById("about").style.display = "none";
             document.getElementById("menu").style.display = "block";
         }
-
 
         function showFooter() {
             document.getElementById("footer").style.display = "block";
