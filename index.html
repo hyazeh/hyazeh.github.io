@@ -15,44 +15,27 @@
     <script src="./assets/js/main.js"></script>
     <script> $(function() { AOS.init(); }); </script>  
     <style>
+        /* Kontener logotypów */
         .logos-container {
             display: flex;
-            flex-direction: column; /* Loga ustawione w pionie */
-            align-items: center; /* Wyśrodkowanie logotypów w pionie */
-            gap: 20px; /* Odstęp między logotypami */
-            justify-content: flex-start; /* Ustawienie logotypów w jednej linii pionowej */
+            flex-direction: column; /* Logotypy w jednej linii pionowej */
+            align-items: center; /* Wyśrodkowanie logotypów */
+            gap: 20px; /* Odstęp pomiędzy logotypami */
+            justify-content: flex-start; /* Ustawienie logotypów od góry */
         }
 
+        /* Każdy paragraf z logo i tekstem */
         .logos-container p {
             display: flex;
-            align-items: center; /* Wyrównanie tekstu obok loga */
+            align-items: center; /* Wyrównanie logotypów i tekstów obok siebie */
             gap: 10px; /* Odstęp między logiem a tekstem */
-            margin: 0; /* Usunięcie marginesów */
+            margin: 0;
         }
 
+        /* Loga mają jednakową wysokość i szerokość */
         .logos-container img {
             width: 30px;
             height: 30px;
-        }
-
-        /* Dla całego kontenera logotypów */
-        .logos-wrapper {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start; /* Loga wyrównane do góry */
-            flex-direction: column;
-        }
-
-        /* Ustawienie wszystkich logotypów w jednej linii prostej */
-        .logos-align {
-            display: flex;
-            align-items: baseline; /* Logotypy będą wyrównane w linii */
-            justify-content: center;
-        }
-
-        .logos-align img {
-            height: 30px; /* Ustawienie jednakowej wysokości logotypów */
-            width: 30px;
         }
     </style>
 </head>
@@ -115,20 +98,17 @@
                         <p>Check out my profiles on different platforms!</p>
                         <p><i class="lab la-steam"></i> <a href="https://steamcommunity.com/groups/YOURGROUP" target="_blank">Steam</a></p>
 
-                        <!-- Wrapper do loga -->
-                        <div class="logos-wrapper">
-                            <div class="logos-align">
-                                <!-- Logotypy w jednej linii pionowej -->
-                                <p>
-                                    <img src="https://i.imgur.com/Tfie9U4.png" alt="Faceit Logo">
-                                    <a href="https://www.faceit.com/en/players/YOURFACEIT" target="_blank">Faceit</a>
-                                </p>
+                        <!-- Kontener logotypów i tekstów -->
+                        <div class="logos-container">
+                            <p>
+                                <img src="https://i.imgur.com/Tfie9U4.png" alt="Faceit Logo">
+                                <a href="https://www.faceit.com/en/players/YOURFACEIT" target="_blank">Faceit</a>
+                            </p>
 
-                                <p>
-                                    <img src="https://i.imgur.com/Y0Cy20e.png" alt="SurfHeaven Logo">
-                                    <a href="https://surfheaven.eu/player/5167198" target="_blank">SurfHeaven</a>
-                                </p>
-                            </div>
+                            <p>
+                                <img src="https://i.imgur.com/Y0Cy20e.png" alt="SurfHeaven Logo">
+                                <a href="https://surfheaven.eu/player/5167198" target="_blank">SurfHeaven</a>
+                            </p>
                         </div>
                     </header>
                     <div class="menu-btn back">
