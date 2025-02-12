@@ -53,14 +53,14 @@
             margin-top: 20px;
         }
 
-        /* Zwiększenie wysokości kontenera w sekcji 'Contact' */
+        /* Zwiększenie wysokości kontenera w sekcji 'Contact' tylko */
         #autosurf {
-            min-height: 350px; 
+            min-height: 350px;  /* Zwiększamy minimalną wysokość kontenera tylko dla 'Contact' */
         }
 
-        /* Zwiększenie wysokości kontenera w sekcji 'Links' */
+        /* Ustawienie większej przestrzeni na 'Back' w 'Links' */
         #surfheaven {
-            min-height: 450px; /* Zwiększamy wysokość kontenera 'Links' */
+            min-height: 400px;  /* Zwiększamy minimalną wysokość dla 'Links', aby 'Back' miało miejsce */
         }
     </style>
 </head>
@@ -182,4 +182,17 @@
 
         function openAbout(){
             document.getElementById("about").style.display = "block";
-            document.getElementById(
+            document.getElementById("menu").style.display = "none";
+        }
+
+        function closeAbout(){
+            document.getElementById("about").style.display = "none";
+            document.getElementById("menu").style.display = "block";
+        }
+
+        function showFooter() {
+            document.getElementById("footer").style.display = "block";
+        }
+    </script>
+</body>
+</html>
