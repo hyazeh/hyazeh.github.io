@@ -17,16 +17,18 @@
     <style>
         .logos-container {
             display: flex;
-            flex-direction: column; /* Loga w pionie */
-            align-items: center; /* Wyśrodkowanie logotypów */
+            flex-direction: column; /* Loga ustawione w pionie */
+            align-items: center; /* Wyśrodkowanie logotypów w pionie */
             gap: 20px; /* Odstęp między logotypami */
+            justify-content: flex-start; /* Ustawienie logotypów w jednej linii pionowej */
+            height: auto;
         }
 
         .logos-container p {
             display: flex;
-            flex-direction: column; /* Tekst pod logo */
-            align-items: center;
-            margin: 0; /* Usunięcie domyślnych marginesów */
+            align-items: center; /* Wyrównanie tekstu obok loga */
+            gap: 10px; /* Odstęp między logiem a tekstem */
+            margin: 0; /* Usunięcie marginesów */
         }
 
         .logos-container img {
@@ -34,11 +36,11 @@
             height: 30px;
         }
 
-        /* Jeśli chcesz aby kontener z logami był wyśrodkowany na stronie */
+        /* Dla całego kontenera logotypów */
         .logos-wrapper {
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start; /* Loga wyrównane do góry */
             flex-direction: column;
         }
     </style>
