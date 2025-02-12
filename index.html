@@ -53,9 +53,14 @@
             margin-top: 20px;
         }
 
-        /* Zwiększanie wysokości kontenera w sekcji 'Contact' */
+        /* Zwiększenie wysokości kontenera w sekcji 'Contact' */
         #autosurf {
-            min-height: 350px;  /* Zwiększamy minimalną wysokość kontenera */
+            min-height: 350px; 
+        }
+
+        /* Zwiększenie wysokości kontenera w sekcji 'Links' */
+        #surfheaven {
+            min-height: 450px; /* Zwiększamy wysokość kontenera 'Links' */
         }
     </style>
 </head>
@@ -177,17 +182,4 @@
 
         function openAbout(){
             document.getElementById("about").style.display = "block";
-            document.getElementById("menu").style.display = "none";
-        }
-
-        function closeAbout(){
-            document.getElementById("about").style.display = "none";
-            document.getElementById("menu").style.display = "block";
-        }
-
-        function showFooter() {
-            document.getElementById("footer").style.display = "block";
-        }
-    </script>
-</body>
-</html>
+            document.getElementById(
