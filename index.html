@@ -55,8 +55,12 @@
 
         /* Sekcja 'Links' z większą wysokością kontenera */
         #surfheaven {
-            min-height: 600px; /* Zwiększenie wysokości, aby 'Back' się zmieściło */
-            padding: 20px; /* Dodanie trochę paddingu do wnętrza kontenera */
+            min-height: 700px; /* Zwiększenie wysokości */
+            display: flex; 
+            flex-direction: column; /* Użycie flex, aby wszystko było w pionie */
+            justify-content: flex-start; /* Ustawienie zawartości na początku */
+            padding: 20px; /* Padding */
+            overflow: hidden; /* Ukrywanie nadmiarowego contentu */
         }
 
         #surfheaven .menu-btn {
