@@ -39,7 +39,7 @@
         .back {
             display: flex;
             justify-content: center; 
-            margin-top: 30px;
+            margin-top: 20px;
         }
 
         .back .btn {
@@ -53,18 +53,23 @@
             margin-top: 20px;
         }
 
-        /* Sekcja 'Links' z większą wysokością kontenera */
+        /* Sekcja 'Links' */
         #surfheaven {
-            min-height: 700px; /* Zwiększenie wysokości */
-            display: flex; 
-            flex-direction: column; /* Użycie flex, aby wszystko było w pionie */
-            justify-content: flex-start; /* Ustawienie zawartości na początku */
-            padding: 20px; /* Padding */
-            overflow: hidden; /* Ukrywanie nadmiarowego contentu */
+            display: flex;
+            flex-direction: column; 
+            align-items: center; /* Wyrównanie wszystkich elementów na środku */
+            justify-content: center; /* Wyrównanie przycisku 'Back' na środku */
+            min-height: 400px; /* Minimalna wysokość sekcji */
+            padding: 20px; /* Padding dla przestrzeni wewnątrz */
         }
 
         #surfheaven .menu-btn {
-            margin-top: 40px; /* Odstęp dla przycisku Back */
+            margin-top: 20px;
+        }
+
+        /* Poprawki dla 'Back' */
+        #surfheaven .back {
+            margin-top: 30px;
         }
     </style>
 </head>
