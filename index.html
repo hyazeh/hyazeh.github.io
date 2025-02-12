@@ -17,15 +17,15 @@
     <style>
         .logos-container {
             display: flex;
-            flex-direction: column;
-            align-items: center; /* Wyśrodkowanie logotypów */
+            justify-content: center; /* Wyśrodkowanie logotypów w poziomie */
+            gap: 20px; /* Odstęp między logotypami */
         }
 
         .logos-container p {
             display: flex;
+            flex-direction: column; /* Tekst pod logo */
             align-items: center;
-            gap: 10px; /* Odstęp między logo a tekstem */
-            margin: 5px 0;
+            margin: 0; /* Usunięcie domyślnych marginesów */
         }
 
         .logos-container img {
