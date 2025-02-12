@@ -40,7 +40,6 @@
             display: flex;
             justify-content: center; 
             margin-top: 20px;
-            margin-bottom: 0; /* Bez marginesu na dole, by przycisk był "przyklejony" do dołu */
         }
 
         .back .btn {
@@ -54,24 +53,13 @@
             margin-top: 20px;
         }
 
-        /* Powiększenie kontenera "Links" i ustawienie przycisku "Back" na dole */
-        #surfheaven {
-            min-height: 1500px; /* Zwiększenie wysokości kontenera */
+        /* Poprawka wysokości kontenera 'Links' */
+        .autosurf-box {
+            height: 600px; /* Powiększona wysokość kontenera w dół */
+            padding: 20px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between; /* Rozciągnięcie przestrzeni w kontenerze */
-            padding: 50px 20px; /* Większy padding */
-        }
-
-        #surfheaven .autosurf-box {
-            flex-grow: 1; /* Umożliwia rozciąganie kontenera */
-            padding: 30px;
-            border-radius: 10px;
-            background-color: rgba(0, 0, 0, 0.7); /* Tło z przezroczystością */
-        }
-
-        .logos-container {
-            padding: 20px 0;
+            justify-content: space-between;
         }
     </style>
 </head>
