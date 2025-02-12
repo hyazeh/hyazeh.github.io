@@ -17,7 +17,8 @@
     <style>
         .logos-container {
             display: flex;
-            justify-content: center; /* Wyśrodkowanie logotypów w poziomie */
+            flex-direction: column; /* Loga w pionie */
+            align-items: center; /* Wyśrodkowanie logotypów */
             gap: 20px; /* Odstęp między logotypami */
         }
 
@@ -31,6 +32,14 @@
         .logos-container img {
             width: 30px;
             height: 30px;
+        }
+
+        /* Jeśli chcesz aby kontener z logami był wyśrodkowany na stronie */
+        .logos-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
     </style>
 </head>
@@ -93,16 +102,19 @@
                         <p>Check out my profiles on different platforms!</p>
                         <p><i class="lab la-steam"></i> <a href="https://steamcommunity.com/groups/YOURGROUP" target="_blank">Steam</a></p>
 
-                        <div class="logos-container">
-                            <p>
-                                <img src="https://i.imgur.com/Tfie9U4.png" alt="Faceit Logo">
-                                <a href="https://www.faceit.com/en/players/YOURFACEIT" target="_blank">Faceit</a>
-                            </p>
+                        <!-- Wrapper do loga -->
+                        <div class="logos-wrapper">
+                            <div class="logos-container">
+                                <p>
+                                    <img src="https://i.imgur.com/Tfie9U4.png" alt="Faceit Logo">
+                                    <a href="https://www.faceit.com/en/players/YOURFACEIT" target="_blank">Faceit</a>
+                                </p>
 
-                            <p>
-                                <img src="https://i.imgur.com/Y0Cy20e.png" alt="SurfHeaven Logo">
-                                <a href="https://surfheaven.eu/player/5167198" target="_blank">SurfHeaven</a>
-                            </p>
+                                <p>
+                                    <img src="https://i.imgur.com/Y0Cy20e.png" alt="SurfHeaven Logo">
+                                    <a href="https://surfheaven.eu/player/5167198" target="_blank">SurfHeaven</a>
+                                </p>
+                            </div>
                         </div>
                     </header>
                     <div class="menu-btn back">
