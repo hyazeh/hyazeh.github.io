@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 :root {
-    --color-body: #000000;
+    --color-body: #0c0009;  /* Tło strony ustawione na #0c0009 */
     --color-heading: #ffffff;
     --color-base: #033f47;
     --color-base2: #1a1a1a;
@@ -18,7 +18,7 @@
 body {
     background: var(--color-body);
     color: var(--color-heading);
-    font-family: var(--font-base),  sans-serif;
+    font-family: var(--font-base), sans-serif;
     overflow: hidden;
 }
 
