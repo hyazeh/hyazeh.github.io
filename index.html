@@ -15,147 +15,7 @@
     <script src="./assets/js/main.js"></script>
     <script> $(function() { AOS.init(); }); </script>  
     <style>
-        .logos-container {
-            display: flex;
-            flex-direction: column; 
-            align-items: center; 
-            gap: 20px; 
-            justify-content: flex-start; 
-            padding: 10px; 
-        }
-
-        .logos-container p {
-            display: flex;
-            align-items: center; 
-            gap: 20px; 
-            margin: 0;
-        }
-
-        .logos-container img {
-            width: 30px;
-            height: 30px;
-        }
-
-        .back {
-            display: flex;
-            justify-content: center; 
-            position: absolute; /* Ustawiamy absolutne pozycjonowanie */
-            bottom: 20px; /* Przesuwamy przycisk na dół kontenera */
-            left: 50%; /* Wyśrodkowanie */
-            transform: translateX(-50%); /* Wyśrodkowanie */
-            margin-top: 0; /* Usuwamy margines top */
-        }
-
-        .back .btn {
-            margin: 0;
-        }
-
-        .authors {
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            margin-top: 20px;
-        }
-
-        /* Zmienione wysokości sekcji */
-        #contact {
-            min-height: 450px; /* Zwiększenie sekcji SurfHeaven */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        #links {
-            min-height: 450px; /* Zwiększenie sekcji SurfHeaven */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        #about {
-            min-height: 450px; /* Zwiększenie sekcji About me */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .autosurf-box {
-            position: relative; /* Umożliwia pozycjonowanie wewnętrznych elementów */
-        }
-
-        /* Dodany styl do wyrównania obrazka */
-        .middle-img {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .middle-img img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        /* Kolor i styl przycisku "Press to scroll down" */
-        .scroll-down a {
-            color: #bc1e4a !important; /* Kolor tekstu */
-            text-decoration: none;
-            border: none; /* Usunięcie obramówki */
-        }
-
-        .scroll-down a:hover {
-            color: #bc1e4a !important; /* Kolor przy najechaniu */
-            text-decoration: none;
-        }
-
-        /* Kolor tekstu przycisków menu - bez tła */
-        .menu-btn a {
-            color: #bc1e4a !important; /* Kolor tekstu */
-            background-color: transparent; /* Brak tła */
-            text-decoration: none; /* Usunięcie podkreślenia */
-            border: none; /* Usunięcie obramówki */
-        }
-
-        .menu-btn a:hover {
-            color: #bc1e4a !important; /* Kolor tekstu przy hover */
-            background-color: transparent; /* Brak tła przy hover */
-        }
-
-        /* Dodaję style do tekstu w stopce */
-        footer {
-            color: #123c6b; /* Kolor tekstu */
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            width: 100%;
-            height: 50px;
-            bottom: 0px;
-            position: absolute;
-            padding: 10px;
-        }
-
-        footer a {
-            color: #123c6b;
-            transition: color 0.3s ease;
-        }
-
-        footer a:hover {
-            color: #bc1e4a;
-        }
-
-        .highlight {
-            color: inherit;
-            transition: color 0.3s ease;
-        }
-
-        .highlight:hover {
-            color: #bc1e4a;
-        }
+        /* Twoje style CSS */
     </style>
 </head>
 <body>
@@ -255,38 +115,45 @@
     </footer>
 
     <script>
-        function openAutosurf(){
+        function openAutosurf() {
             document.getElementById("autosurf").style.display = "block";
             document.getElementById("menu").style.display = "none";
+            window.scrollTo(0, 0); // Przewija stronę do góry
         }
 
-        function closeAutosurf(){
+        function closeAutosurf() {
             document.getElementById("autosurf").style.display = "none";
             document.getElementById("menu").style.display = "block";
+            window.scrollTo(0, 0); // Przewija stronę do góry
         }
 
-        function openSurfHeaven(){
+        function openSurfHeaven() {
             document.getElementById("surfheaven").style.display = "block";
             document.getElementById("menu").style.display = "none";
+            window.scrollTo(0, 0); // Przewija stronę do góry
         }
 
-        function closeSurfHeaven(){
+        function closeSurfHeaven() {
             document.getElementById("surfheaven").style.display = "none";
             document.getElementById("menu").style.display = "block";
+            window.scrollTo(0, 0); // Przewija stronę do góry
         }
 
-        function openAbout(){
+        function openAbout() {
             document.getElementById("about").style.display = "block";
             document.getElementById("menu").style.display = "none";
+            window.scrollTo(0, 0); // Przewija stronę do góry
         }
 
-        function closeAbout(){
+        function closeAbout() {
             document.getElementById("about").style.display = "none";
             document.getElementById("menu").style.display = "block";
+            window.scrollTo(0, 0); // Przewija stronę do góry
         }
 
         function showFooter() {
             document.getElementById("footer").style.display = "block";
+            window.scrollTo(0, document.body.scrollHeight); // Przewija stronę do dołu
         }
     </script>
 </body>
