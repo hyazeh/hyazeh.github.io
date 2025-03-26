@@ -105,21 +105,17 @@
             background-color: transparent;
         }
 
-        /* Stopka widoczna tylko w main */
+        /* Stopka zawsze widoczna w menu-box */
         footer {
-            display: none; /* Domyślnie stopka jest ukryta */
+            display: block;
             position: fixed;
             bottom: 0;
             left: 0;
             width: 100%;
-            background-color: transparent; /* Usuwamy szare tło */
+            background-color: transparent;
             padding: 10px;
             text-align: center;
-        }
-        
-        /* Dodajemy styl, aby stopka była widoczna dopiero po przewinięciu do sekcji main */
-        .footer-visible {
-            display: block;
+            z-index: 999; /* Upewniamy się, że stopka zawsze będzie na wierzchu */
         }
     </style>
 </head>
@@ -130,7 +126,7 @@
         </div>
 
         <div class="scroll-down" style="width: 100%;">
-            <a class="btn btn-brand bounce-3" href="#main" onclick="showFooter()">Press to scroll down</a>
+            <a class="btn btn-brand bounce-3" href="#main">Press to scroll down</a>
         </div>
     </section>
 
@@ -154,6 +150,11 @@
                     <div class="authors" style="width: 100%;">
                         <a class="btn btn-brand" href="https://steamcommunity.com/id/ruiqen">voun</a>
                     </div>
+
+                    <!-- Stopka przeniesiona do menu-box -->
+                    <footer>
+                        <p class="mb-0">&copy; Copyright 2022, <a href="" class="fw-bold"> voun & q1y</a></p>
+                    </footer>
                 </div>
             </div>
         </div>
@@ -214,23 +215,5 @@
             </div>
         </div>
     </section>
-
-    <footer id="footer">
-        <p class="mb-0">&copy; Copyright 2022, <a href="" class="fw-bold"> voun & q1y</a></p>
-    </footer>
-
-    <script>
-        function openAutosurf(){ document.getElementById("autosurf").style.display = "block"; document.getElementById("menu").style.display = "none"; }
-        function closeAutosurf(){ document.getElementById("autosurf").style.display = "none"; document.getElementById("menu").style.display = "block"; }
-        function openSurfHeaven(){ document.getElementById("surfheaven").style.display = "block"; document.getElementById("menu").style.display = "none"; }
-        function closeSurfHeaven(){ document.getElementById("surfheaven").style.display = "none"; document.getElementById("menu").style.display = "block"; }
-        function openAbout(){ document.getElementById("about").style.display = "block"; document.getElementById("menu").style.display = "none"; }
-        function closeAbout(){ document.getElementById("about").style.display = "none"; document.getElementById("menu").style.display = "block"; }
-        
-        // Funkcja do wyświetlenia stopki po przewinięciu do sekcji main
-        function showFooter() { 
-            document.getElementById("footer").classList.add("footer-visible"); 
-        }
-    </script>
 </body>
 </html>
