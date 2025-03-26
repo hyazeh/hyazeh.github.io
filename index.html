@@ -15,6 +15,10 @@
     <script src="./assets/js/main.js"></script>
     <script> $(function() { AOS.init(); }); </script>  
     <style>
+        body {
+            background-color: #474747; /* Kolor tła dla całej strony */
+        }
+
         .logos-container {
             display: flex;
             flex-direction: column; 
@@ -39,11 +43,11 @@
         .back {
             display: flex;
             justify-content: center; 
-            position: absolute; /* Ustawiamy absolutne pozycjonowanie */
-            bottom: 20px; /* Przesuwamy przycisk na dół kontenera */
-            left: 50%; /* Wyśrodkowanie */
-            transform: translateX(-50%); /* Wyśrodkowanie */
-            margin-top: 0; /* Usuwamy margines top */
+            position: absolute; 
+            bottom: 20px; 
+            left: 50%; 
+            transform: translateX(-50%); 
+            margin-top: 0; 
         }
 
         .back .btn {
@@ -103,7 +107,7 @@
 
         /* Kolor i styl przycisku "Press to scroll down" */
         .scroll-down a {
-            color: #bc1e4a !important; /* Kolor tekstu */
+            color: #bc1e4a !important; /* Twój kolor */
             text-decoration: none;
             border: none; /* Usunięcie obramówki */
         }
@@ -111,19 +115,6 @@
         .scroll-down a:hover {
             color: #bc1e4a !important; /* Kolor przy najechaniu */
             text-decoration: none;
-        }
-
-        /* Kolor tekstu przycisków menu - bez tła */
-        .menu-btn a {
-            color: #bc1e4a !important; /* Kolor tekstu */
-            background-color: transparent; /* Brak tła */
-            text-decoration: none; /* Usunięcie podkreślenia */
-            border: none; /* Usunięcie obramówki */
-        }
-
-        .menu-btn a:hover {
-            color: #bc1e4a !important; /* Kolor tekstu przy hover */
-            background-color: transparent; /* Brak tła przy hover */
         }
     </style>
 </head>
