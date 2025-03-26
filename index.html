@@ -92,6 +92,7 @@
             text-decoration: none;
         }
 
+        /* Zmiana koloru tekstu w przyciskach menu */
         .menu-btn a {
             color: #bc1e4a !important;
             background-color: transparent;
@@ -104,30 +105,22 @@
             background-color: transparent;
         }
 
-        /* Stopka domyślnie ukryta */
+        /* Stopka widoczna tylko w main */
         footer {
-            display: none;
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out;
+            display: none; /* Domyślnie stopka jest ukryta */
             position: fixed;
             bottom: 0;
             left: 0;
             width: 100%;
-            background-color: transparent;
+            background-color: transparent; /* Usuwamy szare tło */
             padding: 10px;
             text-align: center;
-            color: #123c6b;
         }
-
+        
+        /* Dodajemy styl, aby stopka była widoczna dopiero po przewinięciu do sekcji main */
         .footer-visible {
             display: block;
-            opacity: 1;
         }
-
-        #start {
-            margin-bottom: 60px;
-        }
-
     </style>
 </head>
 <body>
@@ -180,6 +173,46 @@
                 </div>
             </div>
         </div>
+
+        <div id="surfheaven" class="" style="display: none;">
+            <div class="menu">
+                <div class="autosurf-box">
+                    <header class="hed">
+                        <h5>Links</h5>
+                        <p><i class="lab la-steam"></i> <a href="https://steamcommunity.com/groups/vounik" target="_blank">Steam Group</a></p>
+
+                        <div class="logos-container">
+                            <p>
+                                <img src="https://i.imgur.com/Tfie9U4.png" alt="Faceit Logo">
+                                <a href="https://www.faceit.com/en/players/voun" target="_blank">Faceit</a>
+                            </p>
+
+                            <p>
+                                <img src="https://i.imgur.com/Y0Cy20e.png" alt="SurfHeaven Logo">
+                                <a href="https://surfheaven.eu/player/5167198" target="_blank">SurfHeaven</a>
+                            </p>
+                        </div>
+                    </header>
+                    <div class="menu-btn back">
+                        <a class="btn btn-brand" onclick="closeSurfHeaven()">Back</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="about" style="display: none;">
+            <div class="menu">
+                <div class="autosurf-box">
+                    <header class="hed">
+                        <h5>About me</h5>
+                        <p>test</p>
+                    </header>
+                    <div class="menu-btn back">
+                        <a class="btn btn-brand" onclick="closeAbout()">Back</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <footer id="footer">
@@ -187,24 +220,17 @@
     </footer>
 
     <script>
-        function openAutosurf(){ document.getElementById("autosurf").style.display = "block"; document.getElementById("menu").style.display = "none"; hideFooter(); }
-        function closeAutosurf(){ document.getElementById("autosurf").style.display = "none"; document.getElementById("menu").style.display = "block"; showFooter(); }
-        function openSurfHeaven(){ document.getElementById("surfheaven").style.display = "block"; document.getElementById("menu").style.display = "none"; hideFooter(); }
-        function closeSurfHeaven(){ document.getElementById("surfheaven").style.display = "none"; document.getElementById("menu").style.display = "block"; showFooter(); }
-        function openAbout(){ document.getElementById("about").style.display = "block"; document.getElementById("menu").style.display = "none"; hideFooter(); }
-        function closeAbout(){ document.getElementById("about").style.display = "none"; document.getElementById("menu").style.display = "block"; showFooter(); }
-
-        function showFooter() {
-            document.getElementById("footer").classList.add("footer-visible");
+        function openAutosurf(){ document.getElementById("autosurf").style.display = "block"; document.getElementById("menu").style.display = "none"; }
+        function closeAutosurf(){ document.getElementById("autosurf").style.display = "none"; document.getElementById("menu").style.display = "block"; }
+        function openSurfHeaven(){ document.getElementById("surfheaven").style.display = "block"; document.getElementById("menu").style.display = "none"; }
+        function closeSurfHeaven(){ document.getElementById("surfheaven").style.display = "none"; document.getElementById("menu").style.display = "block"; }
+        function openAbout(){ document.getElementById("about").style.display = "block"; document.getElementById("menu").style.display = "none"; }
+        function closeAbout(){ document.getElementById("about").style.display = "none"; document.getElementById("menu").style.display = "block"; }
+        
+        // Funkcja do wyświetlenia stopki po przewinięciu do sekcji main
+        function showFooter() { 
+            document.getElementById("footer").classList.add("footer-visible"); 
         }
-
-        function hideFooter() {
-            document.getElementById("footer").classList.remove("footer-visible");
-        }
-
-        document.querySelector(".menu-btn a").addEventListener("click", function () {
-            hideFooter();
-        });
     </script>
 </body>
 </html>
