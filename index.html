@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/line-awesome.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-
+  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/aos.js"></script>
@@ -91,24 +91,25 @@
 
         /* Dodany styl do wyrównania obrazka */
         .middle-img {
-            display: flex !important;
-            justify-content: center !important;  /* Wyśrodkowanie poziome */
-            align-items: center !important;      /* Wyśrodkowanie pionowe */
-            position: absolute !important;       /* Pozycjonowanie absolutne */
-            top: 50% !important;                 /* Pozycjonowanie na 50% wysokości okna */
-            left: 50% !important;                /* Pozycjonowanie na 50% szerokości okna */
-            transform: translate(-50%, -50%) !important; /* Przesunięcie o połowę szerokości i wysokości */
-            width: 100% !important;              /* Ustawienie szerokości na 100% */
-            height: 100vh !important;            /* Ustawienie wysokości na 100% wysokości okna */
-            background-color: var(--color-body) !important; /* Tło sekcji */
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .middle-img img {
-            max-width: 100% !important;          /* Maksymalna szerokość obrazka to 100% szerokości kontenera */
-            max-height: 100vh !important;        /* Maksymalna wysokość obrazka to 100% wysokości okna */
-            width: auto !important;              /* Zachowanie proporcji obrazka */
-            height: auto !important;             /* Zachowanie proporcji obrazka */
-            pointer-events: none !important;     /* Zapobiega interakcjom z obrazkiem */
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Zmienione style dla przycisku scrollowania */
+        .scroll-down .btn {
+            color: #bc1e4a; /* Kolor tekstu na #bc1e4a */
+            border: 2px solid #bc1e4a; /* Kolor obramowania na #bc1e4a */
+        }
+
+        .scroll-down .btn:hover {
+            color: #ffffff; /* Zmieniamy kolor tekstu na biały podczas najechania */
+            background-color: #bc1e4a; /* Zmieniamy tło na #bc1e4a */
         }
     </style>
 </head>
@@ -118,7 +119,7 @@
             <img src="assets/images/cool.gif" alt="">
         </div>
 
-        <div class="scroll-down" style="width: 100%;">
+        <div class="scroll-down" style="width: 100%; ">
             <a class="btn btn-brand bounce-3" href="#main" onclick="showFooter()">Press to scroll down</a>
         </div>
     </section>
