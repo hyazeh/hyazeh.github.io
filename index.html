@@ -105,21 +105,27 @@
             background-color: transparent;
         }
 
-        /* Stopka tylko na sekcji main */
+        /* Stopka ukryta na stronie startowej */
         footer {
-            display: none; /* Domyślnie stopka jest ukryta */
+            display: none; /* Ukrywanie stopki domyślnie */
             position: fixed;
             bottom: 0;
             left: 0;
             width: 100%;
-            background-color: transparent; /* Usuwamy szare tło */
+            background-color: transparent;
             padding: 10px;
             text-align: center;
         }
 
         .footer-visible {
-            display: block;
+            display: block; /* Pokazanie stopki w sekcji main */
         }
+
+        /* Dodajemy margines na stronie startowej, żeby oddzielić przycisk od stopki */
+        #start {
+            margin-bottom: 60px; /* Zwiększamy margines, aby nie nakładało się na stopkę */
+        }
+
     </style>
 </head>
 <body>
@@ -226,20 +232,10 @@
         function openAbout(){ document.getElementById("about").style.display = "block"; document.getElementById("menu").style.display = "none"; }
         function closeAbout(){ document.getElementById("about").style.display = "none"; document.getElementById("menu").style.display = "block"; }
         
-        // Funkcja do wyświetlenia stopki po przewinięciu do sekcji main
-        function showFooter() { 
-            // Dodajemy klasę, aby stopka była widoczna
-            document.getElementById("footer").classList.add("footer-visible");
-            // Przechowujemy stan stopki w localStorage, aby nie znikała po odświeżeniu strony
-            localStorage.setItem("footerVisible", "true");
+        // Funkcja do wyświetlania stopki
+        function showFooter() {
+            document.getElementById("footer").classList.add("footer-visible"); // Pokazuje stopkę tylko w #main
         }
-
-        // Funkcja, która sprawdza stan stopki po załadowaniu strony
-        window.onload = function() {
-            if (localStorage.getItem("footerVisible") === "true" && window.location.hash === "#main") {
-                document.getElementById("footer").classList.add("footer-visible");
-            }
-        };
     </script>
 </body>
 </html>
