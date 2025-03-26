@@ -41,21 +41,21 @@ a:link {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute; /* Używamy absolutnego pozycjonowania */
-    top: 50%; /* Wyśrodkowujemy w pionie */
-    left: 50%; /* Wyśrodkowujemy w poziomie */
-    transform: translate(-50%, -50%); /* Zastosowanie transformacji, by dokładnie wyśrodkować */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
-    height: 100vh; /* Ustawiamy wysokość na pełną wysokość okna */
-    background-color: var(--color-body); /* Kolor tła */
+    height: 100vh;
+    background-color: var(--color-body);
 }
 
 .middle-img img {
     max-width: 100%;
     max-height: 100vh;
-    width: auto; /* Zachowujemy proporcje */
-    height: auto; /* Zachowujemy proporcje */
-    pointer-events: none; /* Wyłączamy interakcję z obrazkiem */
+    width: auto;
+    height: auto;
+    pointer-events: none;
 }
 
 .btn {
@@ -74,9 +74,9 @@ a:link {
 }
 
 @keyframes bounce-3 {
-    0%   { transform: translateY(0); }
-    30%  { transform: translateY(-30px); }
-    50%  { transform: translateY(0); }
+    0% { transform: translateY(0); }
+    30% { transform: translateY(-30px); }
+    50% { transform: translateY(0); }
     100% { transform: translateY(0); }
 }
 
@@ -97,8 +97,8 @@ a:link {
 
 .menu-box {
     display: flex;
-    background-color: var(--color-body); /* Tło dopasowane do tła startowego */
-    border: 2px solid #bc1e4a; /* Pogrubienie obramówki do 2px */
+    background-color: var(--color-body);
+    border: 2px solid #bc1e4a;
     border-radius: 5px;
     height: 400px;
     width: 350px;
@@ -111,23 +111,34 @@ a:link {
 }
 
 footer {
-    color: #123c6b; /* Kolor podstawowy tekstu */
+    color: #123c6b;
     justify-content: center;
     align-items: center;
     text-align: center;
     width: 100%;
-    height: 2.5rem;
+    height: 50px;
     bottom: 0px;
     position: absolute;
+    padding: 10px;
 }
 
 footer a {
-    color: #123c6b; /* Kolor podstawowy linku */
-    transition: color 0.3s ease; /* Płynna zmiana koloru */
+    color: #123c6b;
+    transition: color 0.3s ease;
 }
 
 footer a:hover {
-    color: #bc1e4a; /* Kolor po najechaniu */
+    color: #bc1e4a;
+}
+
+/* Stylizacja dla elementu "voun & q1y" w stopce */
+.highlight {
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.highlight:hover {
+    color: #bc1e4a;
 }
 
 #autosurf {
@@ -137,8 +148,8 @@ footer a:hover {
 .autosurf-box {
     display: flex;
     flex-wrap: wrap;
-    background-color: var(--color-body); /* Tło dopasowane do tła startowego */
-    border: 2px solid #bc1e4a; /* Pogrubienie obramówki do 2px */
+    background-color: var(--color-body);
+    border: 2px solid #bc1e4a;
     border-radius: 5px;
     height: 400px;
     width: 600px;
