@@ -105,9 +105,9 @@
             background-color: transparent;
         }
 
-        /* Stopka widoczna tylko po przewinięciu */
+        /* Stopka widoczna tylko w main */
         footer {
-            display: none;
+            display: none; /* Domyślnie stopka jest ukryta */
             position: fixed;
             bottom: 0;
             left: 0;
@@ -117,7 +117,7 @@
             text-align: center;
         }
         
-        /* Dodajemy styl, aby stopka była widoczna dopiero po przewinięciu */
+        /* Dodajemy styl, aby stopka była widoczna dopiero po przewinięciu do sekcji main */
         .footer-visible {
             display: block;
         }
@@ -215,7 +215,7 @@
         </div>
     </section>
 
-    <footer id="footer" class="footer-visible">
+    <footer id="footer">
         <p class="mb-0">&copy; Copyright 2022, <a href="" class="fw-bold"> voun & q1y</a></p>
     </footer>
 
@@ -227,7 +227,7 @@
         function openAbout(){ document.getElementById("about").style.display = "block"; document.getElementById("menu").style.display = "none"; }
         function closeAbout(){ document.getElementById("about").style.display = "none"; document.getElementById("menu").style.display = "block"; }
         
-        // Funkcja do wyświetlenia stopki po przewinięciu
+        // Funkcja do wyświetlenia stopki po przewinięciu do sekcji main
         function showFooter() { 
             document.getElementById("footer").classList.add("footer-visible"); 
         }
