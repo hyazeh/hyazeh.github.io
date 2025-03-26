@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 :root {
-    --color-body: #0c0009; /* Kolor tła */
+    --color-body: #474747; /* Kolor tła */
     --color-heading: #ffffff;
     --color-base: #033f47;
     --color-base2: #1a1a1a;
@@ -98,7 +98,7 @@ a:link {
 .menu-box {
     display: flex;
     background-color: var(--color-body); /* Tło dopasowane do tła startowego */
-    border: 2px solid #bc1e4a; /* Zwiększono szerokość obramówki do 2px */
+    border: 2px solid #bc1e4a; /* Pogrubienie obramówki do 2px */
     border-radius: 5px;
     height: 400px;
     width: 350px;
@@ -137,7 +137,7 @@ footer a:hover {
     display: flex;
     flex-wrap: wrap;
     background-color: var(--color-body); /* Tło dopasowane do tła startowego */
-    border: 2px solid #bc1e4a; /* Zwiększono szerokość obramówki do 2px */
+    border: 2px solid #bc1e4a; /* Pogrubienie obramówki do 2px */
     border-radius: 5px;
     height: 400px;
     width: 600px;
