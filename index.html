@@ -15,47 +15,6 @@
     <script src="./assets/js/main.js"></script>
     <script> $(function() { AOS.init(); }); </script>  
     <style>
-        /* Kolor tła dla całej strony */
-        body {
-            background-color: #474747;
-            color: white; /* Kolor tekstu na biały, żeby pasował do ciemnego tła */
-        }
-
-        /* Kolor tła w sekcjach */
-        section {
-            background-color: #474747;
-        }
-
-        /* Kolor tła w boxach */
-        .menu, .menu-btn, .authors, .autosurf-box, .hed {
-            background-color: #474747;
-        }
-
-        /* Kolor i styl przycisku "Press to scroll down" */
-        .scroll-down a {
-            color: #bc1e4a !important; /* Kolor tekstu */
-            text-decoration: none;
-            border: none; /* Usunięcie obramówki */
-        }
-
-        .scroll-down a:hover {
-            color: #bc1e4a !important; /* Kolor przy najechaniu */
-            text-decoration: none;
-        }
-
-        /* Kolor przycisków */
-        a.btn.btn-brand {
-            background-color: transparent; /* Przezroczystość tła przycisków */
-            color: #bc1e4a; /* Kolor tekstu */
-            border: 1px solid #bc1e4a; /* Obramowanie przycisków w kolorze #bc1e4a */
-        }
-
-        a.btn.btn-brand:hover {
-            color: #ffffff; /* Kolor tekstu po najechaniu */
-            background-color: #bc1e4a; /* Kolor tła przycisku na hover */
-        }
-
-        /* Reszta stylów */
         .logos-container {
             display: flex;
             flex-direction: column; 
@@ -140,6 +99,31 @@
         .middle-img img {
             max-width: 100%;
             height: auto;
+        }
+
+        /* Kolor i styl przycisku "Press to scroll down" */
+        .scroll-down a {
+            color: #bc1e4a !important; /* Kolor tekstu */
+            text-decoration: none;
+            border: none; /* Usunięcie obramówki */
+        }
+
+        .scroll-down a:hover {
+            color: #bc1e4a !important; /* Kolor przy najechaniu */
+            text-decoration: none;
+        }
+
+        /* Kolor tekstu przycisków menu - bez tła */
+        .menu-btn a {
+            color: #bc1e4a !important; /* Kolor tekstu */
+            background-color: transparent; /* Brak tła */
+            text-decoration: none; /* Usunięcie podkreślenia */
+            border: none; /* Usunięcie obramówki */
+        }
+
+        .menu-btn a:hover {
+            color: #bc1e4a !important; /* Kolor tekstu przy hover */
+            background-color: transparent; /* Brak tła przy hover */
         }
     </style>
 </head>
