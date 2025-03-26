@@ -14,6 +14,7 @@
     <script src="./assets/js/aos.js"></script>
     <script src="./assets/js/main.js"></script>
     <script> $(function() { AOS.init(); }); </script>  
+
     <style>
         .logos-container {
             display: flex;
@@ -57,7 +58,26 @@
             margin-top: 20px;
         }
 
-        #contact, #links, #about {
+        /* Zmienione wysokości sekcji */
+        #contact {
+            min-height: 450px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        #links {
+            min-height: 450px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        #about {
             min-height: 450px;
             display: flex;
             flex-direction: column;
@@ -70,66 +90,42 @@
             position: relative;
         }
 
+        /* Dodany styl do wyrównania obrazka */
         .middle-img {
             display: flex;
             justify-content: center;
             align-items: center;
+            height: 100vh; /* Wysokość sekcji na 100% */
+            position: relative;
         }
 
         .middle-img img {
             max-width: 100%;
-            height: auto;
+            max-height: 100%; /* Zapewnia, że obrazek nie wyjdzie poza ekran */
+        }
+
+        /* Przyciski "Scroll Down" */
+        .scroll-down {
+            position: absolute;
+            display: flex;
+            bottom: 20px;
+            width: 100%;
+            justify-content: center;
         }
 
         .scroll-down a {
-            color: #bc1e4a !important;
-            text-decoration: none;
-            border: none;
-        }
-
-        .scroll-down a:hover {
-            color: #bc1e4a !important;
-            text-decoration: none;
-        }
-
-        /* Zmiana koloru tekstu w przyciskach menu */
-        .menu-btn a {
-            color: #bc1e4a !important;
-            background-color: transparent;
-            text-decoration: none;
-            border: none;
-        }
-
-        .menu-btn a:hover {
-            color: #123c6b !important;
-            background-color: transparent;
-        }
-
-        /* Stopka widoczna tylko w main */
-        footer {
-            display: none; /* Domyślnie stopka jest ukryta */
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: transparent; /* Usuwamy szare tło */
-            padding: 10px;
+            font-size: 18px;
             text-align: center;
-        }
-        
-        /* Dodajemy styl, aby stopka była widoczna dopiero po przewinięciu do sekcji main */
-        .footer-visible {
-            display: block;
         }
     </style>
 </head>
 <body>
     <section id="start" class="start" style="min-height: 950px;">
         <div class="middle-img">
-            <img src="assets/images/cool.gif" alt="">
+            <img src="assets/images/cool.gif" alt="Cool GIF">
         </div>
 
-        <div class="scroll-down" style="width: 100%;">
+        <div class="scroll-down">
             <a class="btn btn-brand bounce-3" href="#main" onclick="showFooter()">Press to scroll down</a>
         </div>
     </section>
@@ -213,23 +209,45 @@
                 </div>
             </div>
         </div>
+
+        <footer id="footer" style="width: 100%; display: none;">
+            <p class="mb-0">&copy; Copyright 2022, <a href="" class="fw-bold"> voun & q1y</a></p>
+        </footer>
     </section>
 
-    <footer id="footer">
-        <p class="mb-0">&copy; Copyright 2022, <a href="" class="fw-bold">voun & q1y</a></p>
-    </footer>
-
     <script>
-        function openAutosurf(){ document.getElementById("autosurf").style.display = "block"; document.getElementById("menu").style.display = "none"; }
-        function closeAutosurf(){ document.getElementById("autosurf").style.display = "none"; document.getElementById("menu").style.display = "block"; }
-        function openSurfHeaven(){ document.getElementById("surfheaven").style.display = "block"; document.getElementById("menu").style.display = "none"; }
-        function closeSurfHeaven(){ document.getElementById("surfheaven").style.display = "none"; document.getElementById("menu").style.display = "block"; }
-        function openAbout(){ document.getElementById("about").style.display = "block"; document.getElementById("menu").style.display = "none"; }
-        function closeAbout(){ document.getElementById("about").style.display = "none"; document.getElementById("menu").style.display = "block"; }
-        
-        // Funkcja do wyświetlenia stopki po przewinięciu do sekcji main
-        function showFooter() { 
-            document.getElementById("footer").classList.add("footer-visible"); 
+        function openAutosurf(){
+            document.getElementById("autosurf").style.display = "block";
+            document.getElementById("menu").style.display = "none";
+        }
+
+        function closeAutosurf(){
+            document.getElementById("autosurf").style.display = "none";
+            document.getElementById("menu").style.display = "block";
+        }
+
+        function openSurfHeaven(){
+            document.getElementById("surfheaven").style.display = "block";
+            document.getElementById("menu").style.display = "none";
+        }
+
+        function closeSurfHeaven(){
+            document.getElementById("surfheaven").style.display = "none";
+            document.getElementById("menu").style.display = "block";
+        }
+
+        function openAbout(){
+            document.getElementById("about").style.display = "block";
+            document.getElementById("menu").style.display = "none";
+        }
+
+        function closeAbout(){
+            document.getElementById("about").style.display = "none";
+            document.getElementById("menu").style.display = "block";
+        }
+
+        function showFooter() {
+            document.getElementById("footer").style.display = "block";
         }
     </script>
 </body>
