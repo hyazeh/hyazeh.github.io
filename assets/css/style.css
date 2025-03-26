@@ -20,7 +20,6 @@ body {
     color: var(--color-heading); /* Kolor tekstu */
     font-family: var(--font-base), sans-serif;
     overflow: hidden;
-    margin-bottom: 50px; /* Aby nie zasłaniała treści */
 }
 
 a:link {
@@ -42,21 +41,21 @@ a:link {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: absolute; /* Używamy absolutnego pozycjonowania */
+    top: 50%; /* Wyśrodkowujemy w pionie */
+    left: 50%; /* Wyśrodkowujemy w poziomie */
+    transform: translate(-50%, -50%); /* Zastosowanie transformacji, by dokładnie wyśrodkować */
     width: 100%;
-    height: 100vh;
-    background-color: var(--color-body);
+    height: 100vh; /* Ustawiamy wysokość na pełną wysokość okna */
+    background-color: var(--color-body); /* Kolor tła */
 }
 
 .middle-img img {
     max-width: 100%;
     max-height: 100vh;
-    width: auto;
-    height: auto;
-    pointer-events: none;
+    width: auto; /* Zachowujemy proporcje */
+    height: auto; /* Zachowujemy proporcje */
+    pointer-events: none; /* Wyłączamy interakcję z obrazkiem */
 }
 
 .btn {
@@ -75,9 +74,9 @@ a:link {
 }
 
 @keyframes bounce-3 {
-    0% { transform: translateY(0); }
-    30% { transform: translateY(-30px); }
-    50% { transform: translateY(0); }
+    0%   { transform: translateY(0); }
+    30%  { transform: translateY(-30px); }
+    50%  { transform: translateY(0); }
     100% { transform: translateY(0); }
 }
 
@@ -98,8 +97,8 @@ a:link {
 
 .menu-box {
     display: flex;
-    background-color: var(--color-body);
-    border: 2px solid #bc1e4a;
+    background-color: var(--color-body); /* Tło dopasowane do tła startowego */
+    border: 2px solid #bc1e4a; /* Pogrubienie obramówki do 2px */
     border-radius: 5px;
     height: 400px;
     width: 350px;
@@ -112,17 +111,101 @@ a:link {
 }
 
 footer {
-    display: none; /* Domyślnie stopka jest ukryta */
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: transparent; /* Usuwamy szare tło */
-    padding: 10px;
+    color: #302f2f;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    width: 100%;
+    height: 2.5rem;
+    bottom: 0px;
+    position: absolute;
 }
 
-/* Dodajemy styl, aby stopka była widoczna dopiero po przewinięciu do sekcji main */
-.footer-visible {
-    display: block;
+footer a {
+    color: #302f2f;
+}
+
+footer a:hover {
+    color: #302f2f;
+}
+
+#autosurf {
+    display: none;
+}
+
+.autosurf-box {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--color-body); /* Tło dopasowane do tła startowego */
+    border: 2px solid #bc1e4a; /* Pogrubienie obramówki do 2px */
+    border-radius: 5px;
+    height: 400px;
+    width: 600px;
+}
+
+.menu-btn.back {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    height: 40px;
+}
+
+.back .btn {
+    font-size: 24px;
+}
+
+.hed {
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 90px;
+    text-align: center;
+    justify-content: center;
+}
+
+.hed h5 {
+    margin-bottom: 80px;
+}
+
+.hed p i {
+    font-size: 32px;
+    margin-right: 10px;
+}
+
+.authors {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -22px;
+}
+
+.authors .btn-brand {
+    font-size: 12px;
+}
+
+#freehack {
+    display: none;
+}
+
+.bigklamoty {
+    display: flex;
+    position: absolute;
+    flex-wrap: wrap;
+    top: 5%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-2 {
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+#about {
+    display: none;
+}
+
+#about .hed {
+    margin-bottom: 50px;
 }
