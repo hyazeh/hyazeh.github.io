@@ -108,9 +108,13 @@
         /* Stopka widoczna tylko po przewinięciu */
         footer {
             display: none;
-            position: relative;
+            position: fixed;
+            bottom: 0;
+            left: 0;
             width: 100%;
             background-color: transparent; /* Usuwamy szare tło */
+            padding: 10px;
+            text-align: center;
         }
         
         /* Dodajemy styl, aby stopka była widoczna dopiero po przewinięciu */
@@ -209,11 +213,11 @@
                 </div>
             </div>
         </div>
-
-        <footer id="footer" class="footer-visible">
-            <p class="mb-0">&copy; Copyright 2022, <a href="" class="fw-bold"> voun & q1y</a></p>
-        </footer>
     </section>
+
+    <footer id="footer" class="footer-visible">
+        <p class="mb-0">&copy; Copyright 2022, <a href="" class="fw-bold"> voun & q1y</a></p>
+    </footer>
 
     <script>
         function openAutosurf(){ document.getElementById("autosurf").style.display = "block"; document.getElementById("menu").style.display = "none"; }
