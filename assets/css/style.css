@@ -51,6 +51,7 @@ a:link {
 }
 
 .middle-img img {
+    content: url('cool.gif'); /* Podmiana gifa */
     pointer-events: none;
     max-width: 100%; /* Zapewni, że obrazek nie wyjdzie poza ekran */
     max-height: 100vh; /* Zapewni, że obrazek nie przekroczy wysokości okna */
