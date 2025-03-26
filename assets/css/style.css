@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 :root {
-    --color-body: #0c0009; /* Kolor tła */
+    --color-body: #474747; /* Zmieniony kolor tła */
     --color-heading: #ffffff;
     --color-base: #033f47;
     --color-base2: #1a1a1a;
@@ -108,6 +108,18 @@ a:link {
 
 .menu-btn {
     margin-top: 15px;
+}
+
+.menu-btn a {
+    color: #bc1e4a !important; /* Kolor przycisków */
+    background-color: transparent; /* Brak tła */
+    text-decoration: none; /* Usunięcie podkreślenia */
+    border: none; /* Usunięcie obramówki */
+}
+
+.menu-btn a:hover {
+    color: #bc1e4a !important; /* Kolor przy hover */
+    background-color: transparent; /* Brak tła przy hover */
 }
 
 footer {
