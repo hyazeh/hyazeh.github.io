@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 :root {
-    --color-body: #474747; /* Zmieniony kolor tła */
+    --color-body: #474747; /* Kolor tła */
     --color-heading: #ffffff;
     --color-base: #033f47;
     --color-base2: #1a1a1a;
@@ -98,7 +98,7 @@ a:link {
 .menu-box {
     display: flex;
     background-color: var(--color-body); /* Tło dopasowane do tła startowego */
-    border: 1px solid #ffffff; /* Dla kontrastu biała ramka */
+    border: 1px solid #bc1e4a; /* Zmienione na kolor #bc1e4a */
     border-radius: 5px;
     height: 400px;
     width: 350px;
@@ -108,18 +108,6 @@ a:link {
 
 .menu-btn {
     margin-top: 15px;
-}
-
-.menu-btn a {
-    color: #bc1e4a !important; /* Kolor przycisków */
-    background-color: transparent; /* Brak tła */
-    text-decoration: none; /* Usunięcie podkreślenia */
-    border: none; /* Usunięcie obramówki */
-}
-
-.menu-btn a:hover {
-    color: #bc1e4a !important; /* Kolor przy hover */
-    background-color: transparent; /* Brak tła przy hover */
 }
 
 footer {
@@ -149,7 +137,7 @@ footer a:hover {
     display: flex;
     flex-wrap: wrap;
     background-color: var(--color-body); /* Tło dopasowane do tła startowego */
-    border: 1px solid #ffffff; /* Dla kontrastu biała ramka */
+    border: 1px solid #bc1e4a; /* Zmienione na kolor #bc1e4a */
     border-radius: 5px;
     height: 400px;
     width: 600px;
