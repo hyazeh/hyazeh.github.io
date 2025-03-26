@@ -39,11 +39,11 @@
         .back {
             display: flex;
             justify-content: center; 
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            margin-top: 0;
+            position: absolute; /* Ustawiamy absolutne pozycjonowanie */
+            bottom: 20px; /* Przesuwamy przycisk na dół kontenera */
+            left: 50%; /* Wyśrodkowanie */
+            transform: translateX(-50%); /* Wyśrodkowanie */
+            margin-top: 0; /* Usuwamy margines top */
         }
 
         .back .btn {
@@ -57,8 +57,27 @@
             margin-top: 20px;
         }
 
-        #contact, #links, #about {
-            min-height: 450px;
+        /* Zmienione wysokości sekcji */
+        #contact {
+            min-height: 450px; /* Zwiększenie sekcji SurfHeaven */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        #links {
+            min-height: 450px; /* Zwiększenie sekcji SurfHeaven */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        #about {
+            min-height: 450px; /* Zwiększenie sekcji About me */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -67,71 +86,14 @@
         }
 
         .autosurf-box {
-            position: relative;
+            position: relative; /* Umożliwia pozycjonowanie wewnętrznych elementów */
         }
-
-        .middle-img {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .middle-img img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .scroll-down a {
-            color: #bc1e4a !important;
-            text-decoration: none;
-            border: none;
-        }
-
-        .scroll-down a:hover {
-            color: #bc1e4a !important;
-            text-decoration: none;
-        }
-
-        /* Zmiana koloru tekstu w przyciskach menu */
-        .menu-btn a {
-            color: #bc1e4a !important;
-            background-color: transparent;
-            text-decoration: none;
-            border: none;
-        }
-
-        .menu-btn a:hover {
-            color: #123c6b !important;
-            background-color: transparent;
-        }
-
-        /* Stopka ukryta na stronie startowej */
-        footer {
-            display: none; /* Ukrywanie stopki domyślnie */
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: transparent;
-            padding: 10px;
-            text-align: center;
-        }
-
-        .footer-visible {
-            display: block; /* Pokazanie stopki w sekcji main */
-        }
-
-        /* Dodajemy margines na stronie startowej, żeby oddzielić przycisk od stopki */
-        #start {
-            margin-bottom: 60px; /* Zwiększamy margines, aby nie nakładało się na stopkę */
-        }
-
     </style>
 </head>
 <body>
     <section id="start" class="start" style="min-height: 950px;">
-        <div class="middle-img">
-            <img src="assets/images/cool.gif" alt="">
+        <div class="middle-img" style="width: 100%;">
+            <img src="assets/images/essa.gif" alt="">
         </div>
 
         <div class="scroll-down" style="width: 100%;">
@@ -218,23 +180,45 @@
                 </div>
             </div>
         </div>
+
+        <footer id="footer" style="width: 100%; display: none;">
+            <p class="mb-0">&copy; Copyright 2022, <a href="" class="fw-bold"> voun & q1y</a></p>
+        </footer>
     </section>
 
-    <footer id="footer">
-        <p class="mb-0">&copy; Copyright 2022, <a href="" class="fw-bold"> voun & q1y</a></p>
-    </footer>
-
     <script>
-        function openAutosurf(){ document.getElementById("autosurf").style.display = "block"; document.getElementById("menu").style.display = "none"; }
-        function closeAutosurf(){ document.getElementById("autosurf").style.display = "none"; document.getElementById("menu").style.display = "block"; }
-        function openSurfHeaven(){ document.getElementById("surfheaven").style.display = "block"; document.getElementById("menu").style.display = "none"; }
-        function closeSurfHeaven(){ document.getElementById("surfheaven").style.display = "none"; document.getElementById("menu").style.display = "block"; }
-        function openAbout(){ document.getElementById("about").style.display = "block"; document.getElementById("menu").style.display = "none"; }
-        function closeAbout(){ document.getElementById("about").style.display = "none"; document.getElementById("menu").style.display = "block"; }
-        
-        // Funkcja do wyświetlania stopki
+        function openAutosurf(){
+            document.getElementById("autosurf").style.display = "block";
+            document.getElementById("menu").style.display = "none";
+        }
+
+        function closeAutosurf(){
+            document.getElementById("autosurf").style.display = "none";
+            document.getElementById("menu").style.display = "block";
+        }
+
+        function openSurfHeaven(){
+            document.getElementById("surfheaven").style.display = "block";
+            document.getElementById("menu").style.display = "none";
+        }
+
+        function closeSurfHeaven(){
+            document.getElementById("surfheaven").style.display = "none";
+            document.getElementById("menu").style.display = "block";
+        }
+
+        function openAbout(){
+            document.getElementById("about").style.display = "block";
+            document.getElementById("menu").style.display = "none";
+        }
+
+        function closeAbout(){
+            document.getElementById("about").style.display = "none";
+            document.getElementById("menu").style.display = "block";
+        }
+
         function showFooter() {
-            document.getElementById("footer").classList.add("footer-visible"); // Pokazuje stopkę tylko w #main
+            document.getElementById("footer").style.display = "block";
         }
     </script>
 </body>
