@@ -39,23 +39,23 @@ a:link {
 
 .middle-img {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute; /* Używamy absolutnego pozycjonowania */
-    top: 50%; /* Wyśrodkowujemy w pionie */
-    left: 50%; /* Wyśrodkowujemy w poziomie */
+    justify-content: center;  /* Wyśrodkowanie poziome */
+    align-items: center;      /* Wyśrodkowanie pionowe */
+    position: absolute;       /* Używamy absolutnego pozycjonowania */
+    top: 50%;                 /* Wyśrodkowanie w pionie */
+    left: 50%;                /* Wyśrodkowanie w poziomie */
     transform: translate(-50%, -50%); /* Zastosowanie transformacji, by dokładnie wyśrodkować */
     width: 100%;
-    height: 100vh; /* Ustawiamy wysokość na pełną wysokość okna */
+    height: 100vh;            /* Ustawiamy wysokość na pełną wysokość okna */
     background-color: var(--color-body); /* Kolor tła */
 }
 
 .middle-img img {
     max-width: 100%;
     max-height: 100vh;
-    width: auto; /* Zachowujemy proporcje */
-    height: auto; /* Zachowujemy proporcje */
-    pointer-events: none; /* Wyłączamy interakcję z obrazkiem */
+    width: auto;              /* Zachowanie proporcji */
+    height: auto;             /* Zachowanie proporcji */
+    pointer-events: none;     /* Wyłączenie interakcji z obrazkiem */
 }
 
 .btn {
