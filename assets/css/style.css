@@ -123,6 +123,14 @@ footer {
     left: 0;
     padding: 10px;
     background-color: var(--color-base2); /* Można dodać kolor tła, by lepiej widoczna była stopka */
+    transform: translateY(100%); /* Zaczyna poza ekranem */
+    opacity: 0; /* Ukryta */
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Animacja z transformacją i zmianą przezroczystości */
+}
+
+footer.visible {
+    transform: translateY(0); /* Wjeżdża na ekran */
+    opacity: 1; /* Pełna widoczność */
 }
 
 footer a {
