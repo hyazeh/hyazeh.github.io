@@ -125,6 +125,37 @@
             color: #bc1e4a !important; /* Kolor tekstu przy hover */
             background-color: transparent; /* Brak tła przy hover */
         }
+
+        /* Dodaję style do tekstu w stopce */
+        footer {
+            color: #123c6b; /* Kolor tekstu */
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            height: 50px;
+            bottom: 0px;
+            position: absolute;
+            padding: 10px;
+        }
+
+        footer a {
+            color: #123c6b;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #bc1e4a;
+        }
+
+        .highlight {
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        .highlight:hover {
+            color: #bc1e4a;
+        }
     </style>
 </head>
 <body>
@@ -161,67 +192,67 @@
                 </div>
             </div>
         </div>
-
-        <div id="autosurf" class="" style="display: none;">
-            <div class="menu">
-                <div class="autosurf-box">
-                    <header class="hed">
-                        <h5>For more information, please contact me at</h5>
-                        <p><i class="lab la-discord"></i>vounik</p>
-                        <p><i class="lab la-instagram"></i><a href="https://instagram.com/hyazeh" target="_blank">Instagram</a></p>
-                        <p><i class="lab la-steam"></i> <a href="https://steamcommunity.com/id/ruiqen" target="_blank">Steam</a></p>
-                    </header>
-                    <div class="menu-btn back">
-                        <a class="btn btn-brand" onclick="closeAutosurf()">Back</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="surfheaven" class="" style="display: none;">
-            <div class="menu">
-                <div class="autosurf-box">
-                    <header class="hed">
-                        <h5>Links</h5>
-                        <p><i class="lab la-steam"></i> <a href="https://steamcommunity.com/groups/vounik" target="_blank">Steam Group</a></p>
-
-                        <div class="logos-container">
-                            <p>
-                                <img src="https://i.imgur.com/Tfie9U4.png" alt="Faceit Logo">
-                                <a href="https://www.faceit.com/en/players/voun" target="_blank">Faceit</a>
-                            </p>
-
-                            <p>
-                                <img src="https://i.imgur.com/Y0Cy20e.png" alt="SurfHeaven Logo">
-                                <a href="https://surfheaven.eu/player/5167198" target="_blank">SurfHeaven</a>
-                            </p>
-                        </div>
-                    </header>
-                    <div class="menu-btn back">
-                        <a class="btn btn-brand" onclick="closeSurfHeaven()">Back</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="about" style="display: none;">
-            <div class="menu">
-                <div class="autosurf-box">
-                    <header class="hed">
-                        <h5>About me</h5>
-                        <p>test</p>
-                    </header>
-                    <div class="menu-btn back">
-                        <a class="btn btn-brand" onclick="closeAbout()">Back</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <footer id="footer" style="width: 100%; display: none;">
-            <p class="mb-0">&copy; Copyright 2022, <a href="" class="fw-bold"> voun & q1y</a></p>
-        </footer>
     </section>
+
+    <div id="autosurf" class="" style="display: none;">
+        <div class="menu">
+            <div class="autosurf-box">
+                <header class="hed">
+                    <h5>For more information, please contact me at</h5>
+                    <p><i class="lab la-discord"></i>vounik</p>
+                    <p><i class="lab la-instagram"></i><a href="https://instagram.com/hyazeh" target="_blank">Instagram</a></p>
+                    <p><i class="lab la-steam"></i> <a href="https://steamcommunity.com/id/ruiqen" target="_blank">Steam</a></p>
+                </header>
+                <div class="menu-btn back">
+                    <a class="btn btn-brand" onclick="closeAutosurf()">Back</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="surfheaven" class="" style="display: none;">
+        <div class="menu">
+            <div class="autosurf-box">
+                <header class="hed">
+                    <h5>Links</h5>
+                    <p><i class="lab la-steam"></i> <a href="https://steamcommunity.com/groups/vounik" target="_blank">Steam Group</a></p>
+
+                    <div class="logos-container">
+                        <p>
+                            <img src="https://i.imgur.com/Tfie9U4.png" alt="Faceit Logo">
+                            <a href="https://www.faceit.com/en/players/voun" target="_blank">Faceit</a>
+                        </p>
+
+                        <p>
+                            <img src="https://i.imgur.com/Y0Cy20e.png" alt="SurfHeaven Logo">
+                            <a href="https://surfheaven.eu/player/5167198" target="_blank">SurfHeaven</a>
+                        </p>
+                    </div>
+                </header>
+                <div class="menu-btn back">
+                    <a class="btn btn-brand" onclick="closeSurfHeaven()">Back</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="about" style="display: none;">
+        <div class="menu">
+            <div class="autosurf-box">
+                <header class="hed">
+                    <h5>About me</h5>
+                    <p>test</p>
+                </header>
+                <div class="menu-btn back">
+                    <a class="btn btn-brand" onclick="closeAbout()">Back</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer" style="width: 100%; display: none;">
+        <p class="mb-0">&copy; Copyright 2022, <a href="" class="fw-bold highlight"> voun & q1y</a></p>
+    </footer>
 
     <script>
         function openAutosurf(){
