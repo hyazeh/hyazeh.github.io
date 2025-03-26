@@ -105,7 +105,7 @@
             background-color: transparent;
         }
 
-        /* Stopka widoczna tylko w main */
+        /* Stopka tylko na sekcji main */
         footer {
             display: none; /* Domyślnie stopka jest ukryta */
             position: fixed;
@@ -116,8 +116,7 @@
             padding: 10px;
             text-align: center;
         }
-        
-        /* Dodajemy styl, aby stopka była widoczna dopiero po przewinięciu do sekcji main */
+
         .footer-visible {
             display: block;
         }
@@ -231,14 +230,13 @@
         function showFooter() { 
             // Dodajemy klasę, aby stopka była widoczna
             document.getElementById("footer").classList.add("footer-visible");
-            // Zapisujemy stan w localStorage, aby po odświeżeniu była widoczna
+            // Przechowujemy stan stopki w localStorage, aby nie znikała po odświeżeniu strony
             localStorage.setItem("footerVisible", "true");
         }
 
         // Funkcja, która sprawdza stan stopki po załadowaniu strony
         window.onload = function() {
-            // Sprawdzamy, czy stopka powinna być widoczna
-            if (localStorage.getItem("footerVisible") === "true") {
+            if (localStorage.getItem("footerVisible") === "true" && window.location.hash === "#main") {
                 document.getElementById("footer").classList.add("footer-visible");
             }
         };
