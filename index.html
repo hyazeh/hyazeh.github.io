@@ -104,6 +104,19 @@
             color: #123c6b !important;
             background-color: transparent;
         }
+
+        /* Stopka widoczna tylko po przewinięciu */
+        footer {
+            display: none;
+            position: relative;
+            width: 100%;
+            background-color: transparent; /* Usuwamy szare tło */
+        }
+        
+        /* Dodajemy styl, aby stopka była widoczna dopiero po przewinięciu */
+        .footer-visible {
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -197,7 +210,7 @@
             </div>
         </div>
 
-        <footer id="footer" style="width: 100%; display: block;">
+        <footer id="footer" class="footer-visible">
             <p class="mb-0">&copy; Copyright 2022, <a href="" class="fw-bold"> voun & q1y</a></p>
         </footer>
     </section>
@@ -209,7 +222,11 @@
         function closeSurfHeaven(){ document.getElementById("surfheaven").style.display = "none"; document.getElementById("menu").style.display = "block"; }
         function openAbout(){ document.getElementById("about").style.display = "block"; document.getElementById("menu").style.display = "none"; }
         function closeAbout(){ document.getElementById("about").style.display = "none"; document.getElementById("menu").style.display = "block"; }
-        function showFooter() { document.getElementById("footer").style.display = "block"; }
+        
+        // Funkcja do wyświetlenia stopki po przewinięciu
+        function showFooter() { 
+            document.getElementById("footer").classList.add("footer-visible"); 
+        }
     </script>
 </body>
 </html>
