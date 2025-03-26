@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> voun 🏄 </title>
+    <title>voun 🏄</title>
     <link rel="stylesheet" href="./assets/css/aos.css">
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/line-awesome.min.css">
@@ -13,7 +13,7 @@
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/aos.js"></script>
     <script src="./assets/js/main.js"></script>
-    <script> $(function() { AOS.init(); }); </script>  
+    <script> $(function() { AOS.init(); }); </script>
     <style>
         .logos-container {
             display: flex;
@@ -101,16 +101,38 @@
             height: auto;
         }
 
-        /* Kolor i styl przycisku "Press to scroll down" */
-        .scroll-down a {
-            color: #bc1e4a !important; /* Twój kolor */
+        /* Styl dla przycisków w menu */
+        .menu-btn a {
+            background-color: #bc1e4a; /* Kolor tła */
+            color: #fff; /* Kolor tekstu */
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
             text-decoration: none;
-            border: none; /* Usunięcie obramówki */
+            display: block;
+            margin-bottom: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu-btn a:hover {
+            background-color: #9b1035; /* Ciemniejszy kolor przy hover */
+        }
+
+        .scroll-down a {
+            background-color: #bc1e4a; /* Kolor tła przycisku "Press to scroll down" */
+            color: #fff; /* Kolor tekstu */
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            width: auto;
+            margin: 0 auto;
+            transition: background-color 0.3s ease;
         }
 
         .scroll-down a:hover {
-            color: #bc1e4a !important; /* Kolor przy najechaniu */
-            text-decoration: none;
+            background-color: #9b1035; /* Ciemniejszy kolor przy hover */
         }
     </style>
 </head>
