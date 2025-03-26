@@ -229,8 +229,19 @@
         
         // Funkcja do wyświetlenia stopki po przewinięciu do sekcji main
         function showFooter() { 
-            document.getElementById("footer").classList.add("footer-visible"); 
+            // Dodajemy klasę, aby stopka była widoczna
+            document.getElementById("footer").classList.add("footer-visible");
+            // Zapisujemy stan w localStorage, aby po odświeżeniu była widoczna
+            localStorage.setItem("footerVisible", "true");
         }
+
+        // Funkcja, która sprawdza stan stopki po załadowaniu strony
+        window.onload = function() {
+            // Sprawdzamy, czy stopka powinna być widoczna
+            if (localStorage.getItem("footerVisible") === "true") {
+                document.getElementById("footer").classList.add("footer-visible");
+            }
+        };
     </script>
 </body>
 </html>
