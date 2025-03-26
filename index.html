@@ -101,15 +101,10 @@
             height: auto;
         }
 
-        /* Zmienione style dla przycisku scrollowania */
+        /* Usuwamy obramówkę z przycisku */
         .scroll-down .btn {
-            color: #bc1e4a; /* Kolor tekstu na #bc1e4a */
-            border: 2px solid #bc1e4a; /* Kolor obramowania na #bc1e4a */
-        }
-
-        .scroll-down .btn:hover {
-            color: #ffffff; /* Zmieniamy kolor tekstu na biały podczas najechania */
-            background-color: #bc1e4a; /* Zmieniamy tło na #bc1e4a */
+            outline: none; /* Usuwa obramówkę */
+            border: none;  /* Usuwa obramowanie */
         }
     </style>
 </head>
@@ -119,7 +114,7 @@
             <img src="assets/images/cool.gif" alt="">
         </div>
 
-        <div class="scroll-down" style="width: 100%; ">
+        <div class="scroll-down" style="width: 100%;">
             <a class="btn btn-brand bounce-3" href="#main" onclick="showFooter()">Press to scroll down</a>
         </div>
     </section>
