@@ -111,7 +111,7 @@ a:link {
 }
 
 footer {
-    color: #302f2f;
+    color: #123c6b; /* Kolor podstawowy tekstu */
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -122,11 +122,12 @@ footer {
 }
 
 footer a {
-    color: #302f2f;
+    color: #123c6b; /* Kolor podstawowy linku */
+    transition: color 0.3s ease; /* Płynna zmiana koloru */
 }
 
 footer a:hover {
-    color: #302f2f;
+    color: #bc1e4a; /* Kolor po najechaniu */
 }
 
 #autosurf {
