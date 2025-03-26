@@ -1,295 +1,212 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> voun 🏄 </title>
-    <link rel="stylesheet" href="./assets/css/aos.css">
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/css/line-awesome.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
-  
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="./assets/js/bootstrap.bundle.min.js"></script>
-    <script src="./assets/js/aos.js"></script>
-    <script src="./assets/js/main.js"></script>
-    <script> $(function() { AOS.init(); }); </script>  
-    <style>
-        .logos-container {
-            display: flex;
-            flex-direction: column; 
-            align-items: center; 
-            gap: 20px; 
-            justify-content: flex-start; 
-            padding: 10px; 
-        }
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-        .logos-container p {
-            display: flex;
-            align-items: center; 
-            gap: 20px; 
-            margin: 0;
-        }
+:root {
+    --color-body: #474747; /* Kolor tła */
+    --color-heading: #ffffff;
+    --color-base: #033f47;
+    --color-base2: #1a1a1a;
+    --font-base: "Press Start 2P";
+}
 
-        .logos-container img {
-            width: 30px;
-            height: 30px;
-        }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-        .back {
-            display: flex;
-            justify-content: center; 
-            position: absolute; /* Ustawiamy absolutne pozycjonowanie */
-            bottom: 20px; /* Przesuwamy przycisk na dół kontenera */
-            left: 50%; /* Wyśrodkowanie */
-            transform: translateX(-50%); /* Wyśrodkowanie */
-            margin-top: 0; /* Usuwamy margines top */
-        }
+body {
+    background-color: var(--color-body); /* Kolor tła */
+    color: var(--color-heading); /* Kolor tekstu */
+    font-family: var(--font-base), sans-serif;
+    overflow: hidden;
+}
 
-        .back .btn {
-            margin: 0;
-        }
+a:link {
+    text-decoration: none;
+}
 
-        .authors {
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            margin-top: 20px;
-        }
+.start {
+    align-items: center;
+    justify-content: center;
+}
 
-        /* Zmienione wysokości sekcji */
-        #contact {
-            min-height: 450px; /* Zwiększenie sekcji SurfHeaven */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
+.scroll-down {
+    position: absolute;
+    display: flex;
+    bottom: 0;
+}
 
-        #links {
-            min-height: 450px; /* Zwiększenie sekcji SurfHeaven */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
+.middle-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; /* Używamy absolutnego pozycjonowania */
+    top: 50%; /* Wyśrodkowujemy w pionie */
+    left: 50%; /* Wyśrodkowujemy w poziomie */
+    transform: translate(-50%, -50%); /* Zastosowanie transformacji, by dokładnie wyśrodkować */
+    width: 100%;
+    height: 100vh; /* Ustawiamy wysokość na pełną wysokość okna */
+    background-color: var(--color-body); /* Kolor tła */
+}
 
-        #about {
-            min-height: 450px; /* Zwiększenie sekcji About me */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
+.middle-img img {
+    max-width: 100%;
+    max-height: 100vh;
+    width: auto; /* Zachowujemy proporcje */
+    height: auto; /* Zachowujemy proporcje */
+    pointer-events: none; /* Wyłączamy interakcję z obrazkiem */
+}
 
-        .autosurf-box {
-            position: relative; /* Umożliwia pozycjonowanie wewnętrznych elementów */
-        }
+.btn {
+    border: none;
+    align-self: flex-end;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    margin: 0 auto 0 auto;
+    transform-origin: bottom;
+    width: 100%;
+}
 
-        /* Dodany styl do wyrównania obrazka */
-        .middle-img {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+.bounce-3 {
+    animation-name: bounce-3;
+    animation-timing-function: ease;
+}
 
-        .middle-img img {
-            max-width: 100%;
-            height: auto;
-        }
+@keyframes bounce-3 {
+    0%   { transform: translateY(0); }
+    30%  { transform: translateY(-30px); }
+    50%  { transform: translateY(0); }
+    100% { transform: translateY(0); }
+}
 
-        /* Kolor i styl przycisku "Press to scroll down" */
-        .scroll-down a {
-            color: #bc1e4a !important; /* Kolor tekstu */
-            text-decoration: none;
-            border: none; /* Usunięcie obramówki */
-        }
+.main {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
 
-        .scroll-down a:hover {
-            color: #bc1e4a !important; /* Kolor przy najechaniu */
-            text-decoration: none;
-        }
+.menu {
+    display: flex;
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
 
-        /* Kolor tekstu przycisków menu - bez tła */
-        .menu-btn a {
-            color: #bc1e4a !important; /* Kolor tekstu */
-            background-color: transparent; /* Brak tła */
-            text-decoration: none; /* Usunięcie podkreślenia */
-            border: none; /* Usunięcie obramówki */
-        }
+.menu-box {
+    display: flex;
+    background-color: var(--color-body); /* Tło dopasowane do tła startowego */
+    border: 2px solid #bc1e4a; /* Pogrubienie obramówki do 2px */
+    border-radius: 5px;
+    height: 400px;
+    width: 350px;
+    flex-wrap: wrap;
+    gap: 2px;
+}
 
-        .menu-btn a:hover {
-            color: #bc1e4a !important; /* Kolor tekstu przy hover */
-            background-color: transparent; /* Brak tła przy hover */
-        }
+.menu-btn {
+    margin-top: 15px;
+}
 
-        /* Styl stopki */
-        footer {
-            color: #123c6b; /* Kolor tekstu */
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            width: 100%;
-            height: 50px;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            padding: 10px;
-            display: none; /* Ukrywamy stopkę na początku */
-        }
+footer {
+    color: #123c6b; /* Kolor podstawowy tekstu */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 2.5rem;
+    bottom: 0px;
+    position: absolute;
+}
 
-        footer a {
-            color: #123c6b;
-            transition: color 0.3s ease;
-        }
+footer a {
+    color: #123c6b; /* Kolor podstawowy linku */
+    transition: color 0.3s ease; /* Płynna zmiana koloru */
+}
 
-        footer a:hover {
-            color: #bc1e4a;
-        }
+footer a:hover {
+    color: #bc1e4a; /* Kolor po najechaniu */
+}
 
-        .highlight {
-            color: inherit;
-            transition: color 0.3s ease;
-        }
+#autosurf {
+    display: none;
+}
 
-        .highlight:hover {
-            color: #bc1e4a;
-        }
-    </style>
-</head>
-<body>
-    <section id="start" class="start" style="min-height: 950px;">
-        <div class="middle-img">
-            <img src="assets/images/cool.gif" alt="">
-        </div>
+.autosurf-box {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--color-body); /* Tło dopasowane do tła startowego */
+    border: 2px solid #bc1e4a; /* Pogrubienie obramówki do 2px */
+    border-radius: 5px;
+    height: 400px;
+    width: 600px;
+}
 
-        <div class="scroll-down" style="width: 100%;">
-            <a class="btn btn-brand bounce-3" href="#main" onclick="showFooter()">Press to scroll down</a>
-        </div>
-    </section>
+.menu-btn.back {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    height: 40px;
+}
 
-    <section id="main" class="main" style="min-height: 950px;">
-        <div id="menu">
-            <div class="menu">
-                <div class="menu-box">
-                    <div class="menu-btn" style="width: 100%;">
-                        <a class="btn btn-brand" href="#">Start</a>
-                    </div>
-                    <div class="menu-btn" onclick="openAutosurf()" style="width: 100%;">
-                        <a class="btn btn-brand">Contact</a>
-                    </div>
-                    <div class="menu-btn" onclick="openSurfHeaven()" style="width: 100%;">
-                        <a class="btn btn-brand">Links</a>
-                    </div>
-                    <div class="menu-btn" style="width: 100%;">
-                        <a class="btn btn-brand" onclick="openAbout()">About Me</a>
-                    </div>
+.back .btn {
+    font-size: 24px;
+}
 
-                    <div class="authors" style="width: 100%;">
-                        <a class="btn btn-brand" href="https://steamcommunity.com/id/ruiqen">voun</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+.hed {
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 90px;
+    text-align: center;
+    justify-content: center;
+}
 
-    <div id="autosurf" class="" style="display: none;">
-        <div class="menu">
-            <div class="autosurf-box">
-                <header class="hed">
-                    <h5>For more information, please contact me at</h5>
-                    <p><i class="lab la-discord"></i>vounik</p>
-                    <p><i class="lab la-instagram"></i><a href="https://instagram.com/hyazeh" target="_blank">Instagram</a></p>
-                    <p><i class="lab la-steam"></i> <a href="https://steamcommunity.com/id/ruiqen" target="_blank">Steam</a></p>
-                </header>
-                <div class="menu-btn back">
-                    <a class="btn btn-brand" onclick="closeAutosurf()">Back</a>
-                </div>
-            </div>
-        </div>
-    </div>
+.hed h5 {
+    margin-bottom: 80px;
+}
 
-    <div id="surfheaven" class="" style="display: none;">
-        <div class="menu">
-            <div class="autosurf-box">
-                <header class="hed">
-                    <h5>Links</h5>
-                    <p><i class="lab la-steam"></i> <a href="https://steamcommunity.com/groups/vounik" target="_blank">Steam Group</a></p>
+.hed p i {
+    font-size: 32px;
+    margin-right: 10px;
+}
 
-                    <div class="logos-container">
-                        <p>
-                            <img src="https://i.imgur.com/Tfie9U4.png" alt="Faceit Logo">
-                            <a href="https://www.faceit.com/en/players/voun" target="_blank">Faceit</a>
-                        </p>
+.authors {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -22px;
+}
 
-                        <p>
-                            <img src="https://i.imgur.com/Y0Cy20e.png" alt="SurfHeaven Logo">
-                            <a href="https://surfheaven.eu/player/5167198" target="_blank">SurfHeaven</a>
-                        </p>
-                    </div>
-                </header>
-                <div class="menu-btn back">
-                    <a class="btn btn-brand" onclick="closeSurfHeaven()">Back</a>
-                </div>
-            </div>
-        </div>
-    </div>
+.authors .btn-brand {
+    font-size: 12px;
+}
 
-    <div id="about" style="display: none;">
-        <div class="menu">
-            <div class="autosurf-box">
-                <header class="hed">
-                    <h5>About me</h5>
-                    <p>test</p>
-                </header>
-                <div class="menu-btn back">
-                    <a class="btn btn-brand" onclick="closeAbout()">Back</a>
-                </div>
-            </div>
-        </div>
-    </div>
+#freehack {
+    display: none;
+}
 
-    <footer id="footer">
-        <p class="mb-0">&copy; Copyright 2022, <a href="" class="fw-bold highlight"> voun & q1y</a></p>
-    </footer>
+.bigklamoty {
+    display: flex;
+    position: absolute;
+    flex-wrap: wrap;
+    top: 5%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
 
-    <script>
-        function openAutosurf(){
-            document.getElementById("autosurf").style.display = "block";
-            document.getElementById("menu").style.display = "none";
-        }
+.back-2 {
+    margin-top: 10px;
+    font-size: 25px;
+}
 
-        function closeAutosurf(){
-            document.getElementById("autosurf").style.display = "none";
-            document.getElementById("menu").style.display = "block";
-        }
+#about {
+    display: none;
+}
 
-        function openSurfHeaven(){
-            document.getElementById("surfheaven").style.display = "block";
-            document.getElementById("menu").style.display = "none";
-        }
-
-        function closeSurfHeaven(){
-            document.getElementById("surfheaven").style.display = "none";
-            document.getElementById("menu").style.display = "block";
-        }
-
-        function openAbout(){
-            document.getElementById("about").style.display = "block";
-            document.getElementById("menu").style.display = "none";
-        }
-
-        function closeAbout(){
-            document.getElementById("about").style.display = "none";
-            document.getElementById("menu").style.display = "block";
-        }
-
-        function showFooter() {
-            document.getElementById("footer").style.display = "flex"; /* Pokaż stopkę, kiedy strona zostanie przewinięta */
-        }
-    </script>
-</body>
-</html>
+#about .hed {
+    margin-bottom: 50px;
+}
