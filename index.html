@@ -126,7 +126,7 @@
             background-color: transparent; /* Brak tła przy hover */
         }
 
-        /* Dodaję style do tekstu w stopce */
+        /* Styl stopki */
         footer {
             color: #123c6b; /* Kolor tekstu */
             justify-content: center;
@@ -134,9 +134,11 @@
             text-align: center;
             width: 100%;
             height: 50px;
-            bottom: 0px;
             position: absolute;
+            bottom: 0;
+            left: 0;
             padding: 10px;
+            display: none; /* Ukrywamy stopkę na początku */
         }
 
         footer a {
@@ -250,7 +252,7 @@
         </div>
     </div>
 
-    <footer id="footer" style="width: 100%; display: none;">
+    <footer id="footer">
         <p class="mb-0">&copy; Copyright 2022, <a href="" class="fw-bold highlight"> voun & q1y</a></p>
     </footer>
 
@@ -286,7 +288,7 @@
         }
 
         function showFooter() {
-            document.getElementById("footer").style.display = "block";
+            document.getElementById("footer").style.display = "flex"; /* Pokaż stopkę, kiedy strona zostanie przewinięta */
         }
     </script>
 </body>
