@@ -35,6 +35,8 @@
         .logos-container img {
             width: 30px;
             height: 30px;
+            filter: brightness(0) saturate(100%) invert(16%) sepia(90%) saturate(7445%) hue-rotate(345deg) brightness(97%) contrast(103%);
+            /* zamienia kolor ikon img na #bc1e4a */
         }
 
         .back {
@@ -78,14 +80,6 @@
         .autosurf-box {
             position: relative;
             background-color: transparent; /* przezroczyste tło */
-            border: 2px solid #000000;
-            border-radius: 5px;
-            padding: 10px;
-            width: 600px;
-            flex-wrap: wrap;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
         }
 
         /* --- BOXY MENU --- */
@@ -124,36 +118,35 @@
         }
 
         /* --- POPRAWIONE KOLORY PRZYCISKÓW MENU --- */
-        .menu-box .menu-btn a.btn.btn-brand,
-        .autosurf-box a.btn.btn-brand {
-            color: #000000 !important;       /* czarne napisy w menu i w boxach */
+        .menu-box .menu-btn a.btn.btn-brand {
+            color: #000000 !important;       /* czarne napisy w menu */
             background-color: transparent !important;
             border: none !important;
             transition: color 0.3s ease;
         }
 
-        .menu-box .menu-btn a.btn.btn-brand:hover,
-        .autosurf-box a.btn.btn-brand:hover,
-        .autosurf-box a:hover {
+        .menu-box .menu-btn a.btn.btn-brand:hover {
             color: #bc1e4a !important;      /* krwisty czerwony po najechaniu */
         }
 
-        /* Napisy w boxach Links i About me */
-        .autosurf-box header h5 {
-            color: #bc1e4a; /* krwisty czerwony */
-            text-align: center;
-            margin-bottom: 20px;
+        header h5 {
+            color: #bc1e4a; /* krwisty nagłówek */
         }
 
-        .autosurf-box header p a,
-        .autosurf-box header p span {
-            color: #000000 !important;
-            transition: color 0.3s ease;
+        header p {
+            color: #000000; /* czarny tekst */
         }
 
-        .autosurf-box header p a:hover,
-        .autosurf-box header p span:hover {
-            color: #bc1e4a !important;
+        .discord-text {
+            color: #bc1e4a;
+        }
+
+        .logos-container a {
+            color: #bc1e4a; /* krwisty kolor linków przy ikonach Faceit/SurfHeaven */
+        }
+
+        .logos-container i {
+            color: #bc1e4a; /* krwisty kolor fontowych ikon */
         }
 
         footer {
@@ -219,9 +212,9 @@
             </div>
         </div>
 
-        <div id="autosurf" style="display: none;">
+        <div id="autosurf" class="" style="display: none;">
             <div class="menu">
-                <div class="autosurf-box">
+                <div class="autosurf-box" style="border:2px solid #000000;">
                     <header class="hed">
                         <h5>For more information, please contact me at</h5>
                         <p><i class="lab la-discord"></i><span class="discord-text">vounik</span></p>
@@ -235,17 +228,19 @@
             </div>
         </div>
 
-        <div id="surfheaven" style="display: none;">
+        <div id="surfheaven" class="" style="display: none;">
             <div class="menu">
-                <div class="autosurf-box">
+                <div class="autosurf-box" style="border:2px solid #000000;">
                     <header class="hed">
                         <h5>Links</h5>
                         <p><i class="lab la-steam"></i> <a href="https://steamcommunity.com/groups/autosurfcheat" target="_blank">Steam Group</a></p>
+
                         <div class="logos-container">
                             <p>
                                 <img src="https://i.imgur.com/Tfie9U4.png" alt="Faceit Logo">
                                 <a href="https://www.faceit.com/en/players/voun" target="_blank">Faceit</a>
                             </p>
+
                             <p>
                                 <img src="https://i.imgur.com/Y0Cy20e.png" alt="SurfHeaven Logo">
                                 <a href="https://surfheaven.eu/player/5167198" target="_blank">SurfHeaven</a>
@@ -261,7 +256,7 @@
 
         <div id="about" style="display: none;">
             <div class="menu">
-                <div class="autosurf-box">
+                <div class="autosurf-box" style="border:2px solid #000000;">
                     <header class="hed">
                         <h5>About me</h5>
                         <p>test</p>
@@ -274,6 +269,7 @@
         </div>
     </section>
 
+    <!-- Stopka widoczna pod menu-box -->
     <footer>
         <p class="mb-0">&copy; Copyright 2022, <a href="" class="fw-bold"> voun & q1y</a></p>
     </footer>
