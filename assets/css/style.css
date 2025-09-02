@@ -45,23 +45,24 @@ a:link {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: auto;      /* dopasowujemy do obrazka */
-    height: auto;     /* dopasowujemy do obrazka */
+    width: auto;      /* kontener dopasowuje się do obrazka */
+    height: auto;     /* kontener dopasowuje się do obrazka */
     background-color: var(--color-body);
 }
 
 .middle-img img {
-    max-width: 30%;   /* teraz grafika jest mniejsza */
+    max-width: 30%;   /* obrazek mniejszy na PC */
     height: auto;     /* zachowuje proporcje */
     pointer-events: none;
 }
 
-/* Responsywność dla telefonów */
+/* Responsywność dla ekranów mobilnych */
 @media (max-width: 768px) {
     .middle-img img {
-        max-width: 60%;  /* na telefonie większa, żeby była czytelna */
+        max-width: 60%;  /* na telefonie większy, żeby był czytelny */
     }
 }
+
 }
 
 .middle-img img {
