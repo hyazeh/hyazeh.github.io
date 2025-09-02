@@ -46,25 +46,23 @@ a:link {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: auto;      /* kontener dopasowuje się do obrazka */
-    height: auto;     /* kontener dopasowuje się do obrazka */
+    width: auto;
+    height: auto;
     background-color: var(--color-body);
 }
 
 .middle-img img {
-    width: 100%;   /* obrazek mniejszy na PC */
-    height: auto;     /* zachowuje proporcje */
+    width: 100%;
+    height: auto;
     pointer-events: none;
 }
 
-/* Responsywność dla ekranów mobilnych */
 @media (max-width: 768px) {
     .middle-img img {
-        max-width: 60%;  /* większy na telefonie, żeby był czytelny */
+        max-width: 60%;
     }
 }
 
-/* Pozostałe Twoje style */
 .scroll-down {
     position: absolute;
     display: flex;
@@ -108,9 +106,9 @@ a:link {
 .middle-img img {
     max-width: 50%;
     max-height: 100vh;
-    width: auto; /* Zachowujemy proporcje */
-    height: auto; /* Zachowujemy proporcje */
-    pointer-events: none; /* Wyłączamy interakcję z obrazkiem */
+    width: auto;
+    height: auto;
+    pointer-events: none;
 }
 
 .btn {
@@ -152,8 +150,8 @@ a:link {
 
 .menu-box {
     display: flex;
-    background-color: var(--color-body); /* Tło dopasowane do tła startowego */
-    border: 2px solid #bc1e4a; /* Pogrubienie obramówki do 2px */
+    background-color: transparent; /* zmienione z var(--color-body) */
+    border: 2px solid #bc1e4a;
     border-radius: 5px;
     height: 400px;
     width: 350px;
@@ -166,7 +164,7 @@ a:link {
 }
 
 footer {
-    color: #123c6b; /* Kolor podstawowy tekstu */
+    color: #123c6b;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -177,12 +175,12 @@ footer {
 }
 
 footer a {
-    color: #123c6b; /* Kolor podstawowy linku */
-    transition: color 0.3s ease; /* Płynna zmiana koloru */
+    color: #123c6b;
+    transition: color 0.3s ease;
 }
 
 footer a:hover {
-    color: #bc1e4a; /* Kolor po najechaniu */
+    color: #bc1e4a;
 }
 
 #autosurf {
@@ -192,8 +190,8 @@ footer a:hover {
 .autosurf-box {
     display: flex;
     flex-wrap: wrap;
-    background-color: var(--color-body); /* Tło dopasowane do tła startowego */
-    border: 2px solid #bc1e4a; /* Pogrubienie obramówki do 2px */
+    background-color: transparent; /* zmienione z var(--color-body) */
+    border: 2px solid #bc1e4a;
     border-radius: 5px;
     height: 400px;
     width: 600px;
