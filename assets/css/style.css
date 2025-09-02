@@ -51,7 +51,7 @@ a:link {
 }
 
 .middle-img img {
-    max-width: 100%;
+    max-width: 50%;
     max-height: 100vh;
     width: auto; /* Zachowujemy proporcje */
     height: auto; /* Zachowujemy proporcje */
