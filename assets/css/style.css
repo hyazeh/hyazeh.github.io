@@ -105,28 +105,6 @@ a:link {
     pointer-events: none;
 }
 
-.btn {
-    border: none;
-    align-self: flex-end;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    margin: 0 auto 0 auto;
-    transform-origin: bottom;
-    width: 100%;
-}
-
-.bounce-3 {
-    animation-name: bounce-3;
-    animation-timing-function: ease;
-}
-
-@keyframes bounce-3 {
-    0%   { transform: translateY(0); }
-    30%  { transform: translateY(-30px); }
-    50%  { transform: translateY(0); }
-    100% { transform: translateY(0); }
-}
-
 .main {
     align-items: center;
     justify-content: center;
