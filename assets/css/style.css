@@ -41,13 +41,27 @@ a:link {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute; /* Używamy absolutnego pozycjonowania */
-    top: 50%; /* Wyśrodkowujemy w pionie */
-    left: 50%; /* Wyśrodkowujemy w poziomie */
-    transform: translate(-50%, -50%); /* Zastosowanie transformacji, by dokładnie wyśrodkować */
-    width: 100%;
-    height: 100vh; /* Ustawiamy wysokość na pełną wysokość okna */
-    background-color: var(--color-body); /* Kolor tła */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;   /* dopasowuje się do obrazka */
+    height: auto;  /* dopasowuje się do obrazka */
+    background-color: var(--color-body);
+}
+
+.middle-img img {
+    max-width: 50%;   /* PC: 50% szerokości ekranu */
+    height: auto;     /* zachowuje proporcje */
+    pointer-events: none;
+}
+
+/* Responsywność dla mniejszych ekranów (telefony) */
+@media (max-width: 768px) {
+    .middle-img img {
+        max-width: 80%;  /* na telefonie obrazek większy */
+    }
+}
 }
 
 .middle-img img {
