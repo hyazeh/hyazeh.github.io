@@ -46,26 +46,20 @@ a:link {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 90vw; /* responsywna szerokość */
-    max-width: 600px; /* ograniczenie na duże ekrany */
+    width: auto;
     height: auto;
-    background-color: transparent; /* usuwa szare tło */
+    background-color: transparent; /* POPRAWKA: usuwa szare tło */
 }
 
 .middle-img img {
     width: 100%;
     height: auto;
-    max-height: 90vh; /* max wysokość względem viewport */
     pointer-events: none;
 }
 
 @media (max-width: 768px) {
-    .middle-img {
-        width: 95vw; /* lepiej na telefonach */
-    }
     .middle-img img {
-        max-width: 95%;
-        max-height: 70vh; /* dopasowanie do ekranu telefonu */
+        max-width: 60%;
     }
 }
 
@@ -268,4 +262,23 @@ footer a:hover {
 
 #about .hed {
     margin-bottom: 50px;
+}
+
+/* -------------------------- */
+/* DODANA POPRAWKA DLA TELEFONÓW */
+@media (max-width: 768px) {
+    .middle-img {
+        position: static;
+        top: auto;
+        left: auto;
+        transform: none;
+        justify-content: center;
+        align-items: center;
+        margin: 20px auto;
+    }
+
+    .middle-img img {
+        max-width: 80%;
+        height: auto;
+    }
 }
