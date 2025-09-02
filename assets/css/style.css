@@ -59,7 +59,30 @@ a:link {
 
 @media (max-width: 768px) {
     .middle-img img {
-        max-width: 60%;
+        max-width: 80%;
+        height: auto;
+    }
+    .menu {
+        flex-direction: column;
+        top: 10%;
+    }
+    .menu-box {
+        width: 90%;
+        height: auto;
+    }
+    .autosurf-box {
+        width: 90%;
+        height: auto;
+    }
+    .hed {
+        margin-bottom: 50px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .authors {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
     }
 }
 
@@ -262,23 +285,4 @@ footer a:hover {
 
 #about .hed {
     margin-bottom: 50px;
-}
-
-/* -------------------------- */
-/* DODANA POPRAWKA DLA TELEFONÓW */
-@media (max-width: 768px) {
-    .middle-img {
-        position: static;
-        top: auto;
-        left: auto;
-        transform: none;
-        justify-content: center;
-        align-items: center;
-        margin: 20px auto;
-    }
-
-    .middle-img img {
-        max-width: 80%;
-        height: auto;
-    }
 }
