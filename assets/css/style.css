@@ -46,25 +46,26 @@ a:link {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: auto;
+    width: 90vw; /* responsywna szerokość */
+    max-width: 600px; /* ograniczenie na duże ekrany */
     height: auto;
-    background-color: transparent; /* POPRAWKA: usuwa szare tło */
+    background-color: transparent; /* usuwa szare tło */
 }
 
 .middle-img img {
     width: 100%;
     height: auto;
+    max-height: 90vh; /* max wysokość względem viewport */
     pointer-events: none;
 }
 
 @media (max-width: 768px) {
-    .middle-img img {
-        max-width: 90%;  /* Zwiększone dla telefonów */
-        height: auto;
-    }
-
     .middle-img {
-        top: 45%; /* lekka korekta pozycji dla mniejszych ekranów */
+        width: 95vw; /* lepiej na telefonach */
+    }
+    .middle-img img {
+        max-width: 95%;
+        max-height: 70vh; /* dopasowanie do ekranu telefonu */
     }
 }
 
