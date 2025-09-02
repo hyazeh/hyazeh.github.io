@@ -32,17 +32,9 @@
             margin: 0;
         }
 
-        /* Faceit / SurfHeaven images na krwisty */
         .logos-container img {
             width: 30px;
             height: 30px;
-            filter: brightness(0) saturate(100%) invert(16%) sepia(90%) saturate(7445%) hue-rotate(345deg) brightness(97%) contrast(103%);
-        }
-
-        /* Fontowe ikony w krwisty */
-        .logos-container i,
-        .autosurf-box i {
-            color: #bc1e4a;
         }
 
         .back {
@@ -141,7 +133,8 @@
         }
 
         .menu-box .menu-btn a.btn.btn-brand:hover,
-        .autosurf-box a.btn.btn-brand:hover {
+        .autosurf-box a.btn.btn-brand:hover,
+        .autosurf-box a:hover {
             color: #bc1e4a !important;      /* krwisty czerwony po najechaniu */
         }
 
@@ -150,6 +143,17 @@
             color: #bc1e4a; /* krwisty czerwony */
             text-align: center;
             margin-bottom: 20px;
+        }
+
+        .autosurf-box header p a,
+        .autosurf-box header p span {
+            color: #000000 !important;
+            transition: color 0.3s ease;
+        }
+
+        .autosurf-box header p a:hover,
+        .autosurf-box header p span:hover {
+            color: #bc1e4a !important;
         }
 
         footer {
