@@ -57,12 +57,6 @@ a:link {
     pointer-events: none;
 }
 
-.scroll-down {
-    position: absolute;
-    display: flex;
-    bottom: 0;
-}
-
 .btn {
     border: none;
     align-self: flex-end;
@@ -123,7 +117,7 @@ a:link {
 /* --- BOXY MENU --- */
 .menu-box {
     display: flex;
-    background-color: #000000; /* czarne boxy */
+    background-color: transparent; /* tło przezroczyste */
     border: 2px solid #000000;
     border-radius: 5px;
     height: 400px;
@@ -134,7 +128,7 @@ a:link {
 
 /* --- PRZYCISKI W MENU --- */
 .menu-btn a {
-    color: #000000 !important; /* czarny tekst domyślnie */
+    color: #000000 !important; /* czarne napisy domyślnie */
     background-color: transparent;
     text-decoration: none;
     border: none;
@@ -176,7 +170,7 @@ footer a:hover {
 .autosurf-box {
     display: flex;
     flex-wrap: wrap;
-    background-color: transparent;
+    background-color: transparent; /* zostaje transparentne */
     border: 2px solid #bc1e4a;
     border-radius: 5px;
     height: 400px;
