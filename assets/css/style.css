@@ -48,7 +48,7 @@ a:link {
     transform: translate(-50%, -50%);
     width: auto;
     height: auto;
-    background-color: var(--color-body);
+    background-color: transparent; /* POPRAWKA: usuwa szare tło */
 }
 
 .middle-img img {
