@@ -57,35 +57,6 @@ a:link {
     pointer-events: none;
 }
 
-@media (max-width: 768px) {
-    .middle-img img {
-        max-width: 80%;
-        height: auto;
-    }
-    .menu {
-        flex-direction: column;
-        top: 10%;
-    }
-    .menu-box {
-        width: 90%;
-        height: auto;
-    }
-    .autosurf-box {
-        width: 90%;
-        height: auto;
-    }
-    .hed {
-        margin-bottom: 50px;
-        margin-left: 5px;
-        margin-right: 5px;
-    }
-    .authors {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 10px;
-    }
-}
-
 .scroll-down {
     position: absolute;
     display: flex;
@@ -285,4 +256,37 @@ footer a:hover {
 
 #about .hed {
     margin-bottom: 50px;
+}
+
+/* --- RESPONSYWNOŚĆ NA TELEFONACH --- */
+@media (max-width: 768px) {
+    .middle-img {
+        top: 40%;
+        transform: translate(-50%, -40%);
+    }
+    .middle-img img {
+        max-width: 80%;
+        max-height: 60vh;
+    }
+    .menu {
+        flex-direction: column;
+        top: 10%;
+    }
+    .menu-box, .autosurf-box {
+        width: 90%;
+        height: auto;
+    }
+    .hed {
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-bottom: 40px;
+    }
+    .authors {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+    .scroll-down {
+        bottom: 10px;
+    }
 }
