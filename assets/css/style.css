@@ -145,7 +145,7 @@ a:link {
 .menu-box {
     display: flex;
     background-color: transparent; /* zmienione z var(--color-body) */
-    border: 2px solid #bc1e4a;
+    border: 2px solid #ffffff;
     border-radius: 5px;
     height: 400px;
     width: 350px;
