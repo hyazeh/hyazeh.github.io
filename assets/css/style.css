@@ -37,6 +37,7 @@ a:link {
     bottom: 0;
 }
 
+/* Sekcja startowa */
 .middle-img {
     display: flex;
     justify-content: center;
@@ -59,9 +60,41 @@ a:link {
 /* Responsywność dla ekranów mobilnych */
 @media (max-width: 768px) {
     .middle-img img {
-        max-width: 60%;  /* na telefonie większy, żeby był czytelny */
+        max-width: 60%;  /* większy na telefonie, żeby był czytelny */
     }
 }
+
+/* Pozostałe Twoje style */
+.scroll-down {
+    position: absolute;
+    display: flex;
+    bottom: 0;
+}
+
+.btn {
+    border: none;
+    align-self: flex-end;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    margin: 0 auto;
+    transform-origin: bottom;
+    width: 100%;
+}
+
+.bounce-3 {
+    animation-name: bounce-3;
+    animation-timing-function: ease;
+}
+
+@keyframes bounce-3 {
+    0%   { transform: translateY(0); }
+    30%  { transform: translateY(-30px); }
+    50%  { transform: translateY(0); }
+    100% { transform: translateY(0); }
+}
+
+/* Dodaj tutaj resztę swojego CSS (menu, footer, itp.) */
+
 
 }
 
