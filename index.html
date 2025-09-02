@@ -49,6 +49,14 @@
 
         .back .btn {
             margin: 0;
+            color: #000000 !important;
+            background-color: transparent !important;
+            border: none !important;
+            transition: color 0.3s ease;
+        }
+
+        .back .btn:hover {
+            color: #bc1e4a !important;
         }
 
         .authors {
@@ -70,6 +78,14 @@
         .autosurf-box {
             position: relative;
             background-color: transparent; /* przezroczyste tło */
+            border: 2px solid #000000;
+            border-radius: 5px;
+            padding: 10px;
+            width: 600px;
+            flex-wrap: wrap;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         /* --- BOXY MENU --- */
@@ -108,27 +124,36 @@
         }
 
         /* --- POPRAWIONE KOLORY PRZYCISKÓW MENU --- */
-        .menu-box .menu-btn a.btn.btn-brand {
-            color: #000000 !important;       /* czarne napisy w menu */
+        .menu-box .menu-btn a.btn.btn-brand,
+        .autosurf-box a.btn.btn-brand {
+            color: #000000 !important;       /* czarne napisy w menu i w boxach */
             background-color: transparent !important;
             border: none !important;
             transition: color 0.3s ease;
         }
 
-        .menu-box .menu-btn a.btn.btn-brand:hover {
+        .menu-box .menu-btn a.btn.btn-brand:hover,
+        .autosurf-box a.btn.btn-brand:hover,
+        .autosurf-box a:hover {
             color: #bc1e4a !important;      /* krwisty czerwony po najechaniu */
         }
 
-        header h5 {
-            color: #123c6b;
+        /* Napisy w boxach Links i About me */
+        .autosurf-box header h5 {
+            color: #bc1e4a; /* krwisty czerwony */
+            text-align: center;
+            margin-bottom: 20px;
         }
 
-        header p {
-            color: #123c6b;
+        .autosurf-box header p a,
+        .autosurf-box header p span {
+            color: #000000 !important;
+            transition: color 0.3s ease;
         }
 
-        .discord-text {
-            color: #000000;
+        .autosurf-box header p a:hover,
+        .autosurf-box header p span:hover {
+            color: #bc1e4a !important;
         }
 
         footer {
@@ -194,15 +219,14 @@
             </div>
         </div>
 
-        <!-- Contact Box -->
-        <div id="autosurf" class="" style="display: none;">
+        <div id="autosurf" style="display: none;">
             <div class="menu">
-                <div class="autosurf-box" style="border: 2px solid #000000;">
+                <div class="autosurf-box">
                     <header class="hed">
-                        <h5 style="color: #bc1e4a;">For more information, please contact me at</h5>
-                        <p><i class="lab la-discord"></i><span class="discord-text" style="color: #000000;">vounik</span></p>
-                        <p><i class="lab la-instagram"></i><a href="https://instagram.com/krystekagent" target="_blank" style="color: #000000; text-decoration: none;" onmouseover="this.style.color='#bc1e4a';" onmouseout="this.style.color='#000000';">Instagram</a></p>
-                        <p><i class="lab la-steam"></i> <a href="https://steamcommunity.com/id/vounik" target="_blank" style="color: #000000; text-decoration: none;" onmouseover="this.style.color='#bc1e4a';" onmouseout="this.style.color='#000000';">Steam</a></p>
+                        <h5>For more information, please contact me at</h5>
+                        <p><i class="lab la-discord"></i><span class="discord-text">vounik</span></p>
+                        <p><i class="lab la-instagram"></i><a href="https://instagram.com/krystekagent" target="_blank">Instagram</a></p>
+                        <p><i class="lab la-steam"></i> <a href="https://steamcommunity.com/id/vounik" target="_blank">Steam</a></p>
                     </header>
                     <div class="menu-btn back">
                         <a class="btn btn-brand" onclick="closeAutosurf()">Back</a>
@@ -211,19 +235,17 @@
             </div>
         </div>
 
-        <div id="surfheaven" class="" style="display: none;">
+        <div id="surfheaven" style="display: none;">
             <div class="menu">
                 <div class="autosurf-box">
                     <header class="hed">
                         <h5>Links</h5>
                         <p><i class="lab la-steam"></i> <a href="https://steamcommunity.com/groups/autosurfcheat" target="_blank">Steam Group</a></p>
-
                         <div class="logos-container">
                             <p>
                                 <img src="https://i.imgur.com/Tfie9U4.png" alt="Faceit Logo">
                                 <a href="https://www.faceit.com/en/players/voun" target="_blank">Faceit</a>
                             </p>
-
                             <p>
                                 <img src="https://i.imgur.com/Y0Cy20e.png" alt="SurfHeaven Logo">
                                 <a href="https://surfheaven.eu/player/5167198" target="_blank">SurfHeaven</a>
@@ -252,7 +274,6 @@
         </div>
     </section>
 
-    <!-- Stopka widoczna pod menu-box -->
     <footer>
         <p class="mb-0">&copy; Copyright 2022, <a href="" class="fw-bold"> voun & q1y</a></p>
     </footer>
