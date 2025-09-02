@@ -45,21 +45,21 @@ a:link {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: auto;   /* dopasowuje się do obrazka */
-    height: auto;  /* dopasowuje się do obrazka */
+    width: auto;      /* dopasowujemy do obrazka */
+    height: auto;     /* dopasowujemy do obrazka */
     background-color: var(--color-body);
 }
 
 .middle-img img {
-    max-width: 50%;   /* PC: 50% szerokości ekranu */
+    max-width: 30%;   /* teraz grafika jest mniejsza */
     height: auto;     /* zachowuje proporcje */
     pointer-events: none;
 }
 
-/* Responsywność dla mniejszych ekranów (telefony) */
+/* Responsywność dla telefonów */
 @media (max-width: 768px) {
     .middle-img img {
-        max-width: 80%;  /* na telefonie obrazek większy */
+        max-width: 60%;  /* na telefonie większa, żeby była czytelna */
     }
 }
 }
