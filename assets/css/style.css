@@ -52,7 +52,7 @@ a:link {
 }
 
 .middle-img img {
-    max-width: 30%;   /* obrazek mniejszy na PC */
+    width: 30%;   /* obrazek mniejszy na PC */
     height: auto;     /* zachowuje proporcje */
     pointer-events: none;
 }
