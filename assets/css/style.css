@@ -48,7 +48,7 @@ a:link {
     transform: translate(-50%, -50%);
     width: auto;
     height: auto;
-    background-color: transparent; /* POPRAWKA: usuwa szare tło */
+    background-color: transparent; /* usuwa szare tło */
 }
 
 .middle-img img {
@@ -142,15 +142,29 @@ a:link {
     justify-content: center;
 }
 
+/* --- BOXY MENU --- */
 .menu-box {
     display: flex;
-    background-color: transparent; /* zmienione z var(--color-body) */
+    background-color: #000000; /* czarne boxy */
     border: 2px solid #000000;
     border-radius: 5px;
     height: 400px;
     width: 350px;
     flex-wrap: wrap;
     gap: 2px;
+}
+
+/* --- PRZYCISKI W MENU --- */
+.menu-btn a {
+    color: #000000 !important; /* czarny tekst domyślnie */
+    background-color: transparent;
+    text-decoration: none;
+    border: none;
+    transition: color 0.3s ease;
+}
+
+.menu-btn a:hover {
+    color: #bc1e4a !important; /* krwisty czerwony po najechaniu */
 }
 
 .menu-btn {
@@ -184,7 +198,7 @@ footer a:hover {
 .autosurf-box {
     display: flex;
     flex-wrap: wrap;
-    background-color: transparent; /* zmienione z var(--color-body) */
+    background-color: transparent;
     border: 2px solid #bc1e4a;
     border-radius: 5px;
     height: 400px;
