@@ -14,6 +14,7 @@
     <script src="./assets/js/aos.js"></script>
     <script src="./assets/js/main.js"></script>
     <script> $(function() { AOS.init(); }); </script>  
+
     <style>
         .logos-container {
             display: flex;
@@ -72,7 +73,7 @@
         }
 
         .menu-box {
-            background-color: transparent; /* przezroczyste tło */
+            background-color: #000000; /* czarne boxy */
         }
 
         .middle-img {
@@ -98,16 +99,17 @@
             text-decoration: none;
         }
 
+        /* --- POPRAWIONE KOLORY PRZYCISKÓW MENU --- */
         .menu-btn a {
-            color: #bc1e4a !important;
+            color: #000000 !important; /* czarny tekst domyślnie */
             background-color: transparent;
             text-decoration: none;
             border: none;
+            transition: color 0.3s ease;
         }
 
         .menu-btn a:hover {
-            color: #123c6b !important;
-            background-color: transparent;
+            color: #bc1e4a !important; /* krwisty czerwony po najechaniu */
         }
 
         header h5 {
