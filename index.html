@@ -129,20 +129,24 @@
             text-align: center;
             margin-top: -40px; 
         }
+
+        /* --- Video background --- */
+        .bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
     </style>
 </head>
 <body>
-    <!-- Video tło -->
-    <video autoplay muted loop id="bg-video" style="
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: -1;">
-        <source src="assets/video/background.mp4" type="video/mp4">
-        Your browser does not support the video tag.
+    <!-- Video w tle -->
+    <video autoplay muted loop class="bg-video">
+        <source src="assets/videos/surfik.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
     </video>
 
     <section id="start" class="start" style="min-height: 950px;">
